@@ -1,0 +1,56 @@
+-- BP 7.1.6 content: SystemModel syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO S_SYS
+	VALUES ("58a94154-59b3-44e7-aacd-57f98f0bc345",
+	'mc_java_test',
+	1);
+INSERT INTO GD_MD
+	VALUES ("2998ea2f-e0c4-432f-afd5-04d8210dab5f",
+	108,
+	"58a94154-59b3-44e7-aacd-57f98f0bc345",
+	92,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'',
+	'mc_java_test');
+INSERT INTO GD_GE
+	VALUES ("7a97fb2d-e644-4636-8268-02cf2fbec3ec",
+	"2998ea2f-e0c4-432f-afd5-04d8210dab5f",
+	"d8a495f3-8b4e-41cf-af62-1eb9956c8ddc",
+	108,
+	0,
+	'mc_java_test::lib');
+INSERT INTO GD_SHP
+	VALUES ("7a97fb2d-e644-4636-8268-02cf2fbec3ec");
+INSERT INTO GD_NCS
+	VALUES ("7a97fb2d-e644-4636-8268-02cf2fbec3ec");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"7a97fb2d-e644-4636-8268-02cf2fbec3ec");
+INSERT INTO DIM_GE
+	VALUES (220.000000,
+	0.000000,
+	"7a97fb2d-e644-4636-8268-02cf2fbec3ec",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("7a97fb2d-e644-4636-8268-02cf2fbec3ec",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("2998ea2f-e0c4-432f-afd5-04d8210dab5f",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");

@@ -1,0 +1,70 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("d8a495f3-8b4e-41cf-af62-1eb9956c8ddc",
+	"58a94154-59b3-44e7-aacd-57f98f0bc345",
+	"58a94154-59b3-44e7-aacd-57f98f0bc345",
+	'lib',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("14ec5f64-b5ef-42ed-ac29-c170b4f27785",
+	112,
+	"d8a495f3-8b4e-41cf-af62-1eb9956c8ddc",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'',
+	'mc_java_test::lib');
+INSERT INTO GD_GE
+	VALUES ("78eff74b-b0f2-4674-855a-7e1d3d6c2123",
+	"14ec5f64-b5ef-42ed-ac29-c170b4f27785",
+	"f377b0db-faa3-4440-80b3-6b4c1d9755eb",
+	98,
+	0,
+	'mc_java_test::lib::comp');
+INSERT INTO GD_SHP
+	VALUES ("78eff74b-b0f2-4674-855a-7e1d3d6c2123");
+INSERT INTO GD_NCS
+	VALUES ("78eff74b-b0f2-4674-855a-7e1d3d6c2123");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"78eff74b-b0f2-4674-855a-7e1d3d6c2123");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"78eff74b-b0f2-4674-855a-7e1d3d6c2123",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("78eff74b-b0f2-4674-855a-7e1d3d6c2123",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("14ec5f64-b5ef-42ed-ac29-c170b4f27785",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("d8a495f3-8b4e-41cf-af62-1eb9956c8ddc",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("58a94154-59b3-44e7-aacd-57f98f0bc345",
+	'mc_java_test',
+	1,
+	'../mc_java_test.xtuml');
