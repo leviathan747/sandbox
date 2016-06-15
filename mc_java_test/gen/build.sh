@@ -1,2 +1,2 @@
-rm -rf code_generation/
+rm -rf code_generation/_ch/*; rm -rf code_generation/arc; rm -f code_generation/_system.sql; rm -f code_generation/_system.pre; rm -f code_generation/a.xtuml;
 /media/psf/Home/xtuml/BridgePoint_5.3.5/BridgePoint/eclipse/plugins/org.xtuml.bp.mc.c.source_5.3.5/mc3020/bin/xtumlmc_build -home /media/psf/Home/xtuml/BridgePoint_5.3.5/BridgePoint/eclipse/plugins/org.xtuml.bp.mc.c.source_5.3.5/ -l3s -e -d code_generation -O ../../src/
