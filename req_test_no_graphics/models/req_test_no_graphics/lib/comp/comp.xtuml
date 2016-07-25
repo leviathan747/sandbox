@@ -1,0 +1,43 @@
+-- BP 7.1.6 content: Component syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_C
+	VALUES ("4f013d7c-082e-487a-b161-2ab987b8b3f2",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'comp',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'');
+INSERT INTO C_PO
+	VALUES ("be45f2a2-3190-45da-be6f-21ca350ced4b",
+	"4f013d7c-082e-487a-b161-2ab987b8b3f2",
+	'Port1',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("a781a3b5-3191-4146-badf-8e62f65ded0b",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	"be45f2a2-3190-45da-be6f-21ca350ced4b");
+INSERT INTO C_R
+	VALUES ("a781a3b5-3191-4146-badf-8e62f65ded0b",
+	'Unnamed Interface',
+	'',
+	'Unnamed Interface',
+	'comp::Port1::Unnamed Interface');
+INSERT INTO PE_PE
+	VALUES ("4f013d7c-082e-487a-b161-2ab987b8b3f2",
+	1,
+	"54fcde0e-f710-44aa-b3cc-87fc993aed58",
+	"00000000-0000-0000-0000-000000000000",
+	2);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("54fcde0e-f710-44aa-b3cc-87fc993aed58",
+	"67f33e81-ef46-4664-862d-e03b18bbff4b",
+	"67f33e81-ef46-4664-862d-e03b18bbff4b",
+	'lib',
+	'',
+	0,
+	'../lib.xtuml');
