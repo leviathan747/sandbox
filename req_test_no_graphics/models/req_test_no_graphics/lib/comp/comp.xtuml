@@ -27,6 +27,23 @@ INSERT INTO C_R
 	'',
 	'Unnamed Interface',
 	'comp::Port1::Unnamed Interface');
+INSERT INTO C_PO
+	VALUES ("4ab7c320-8203-447b-b5d7-830cb0e390ef",
+	"4f013d7c-082e-487a-b161-2ab987b8b3f2",
+	'Port2',
+	0,
+	0);
+INSERT INTO C_IR
+	VALUES ("4b620291-811a-4882-83fb-262601a31693",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	"4ab7c320-8203-447b-b5d7-830cb0e390ef");
+INSERT INTO C_P
+	VALUES ("4b620291-811a-4882-83fb-262601a31693",
+	'Unnamed Interface',
+	'Unnamed Interface',
+	'',
+	'comp::Port2::Unnamed Interface');
 INSERT INTO PE_PE
 	VALUES ("4f013d7c-082e-487a-b161-2ab987b8b3f2",
 	1,
