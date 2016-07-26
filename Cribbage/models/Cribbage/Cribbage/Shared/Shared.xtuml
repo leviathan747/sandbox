@@ -1,0 +1,64 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("2dc09480-bb40-4305-aff7-75a75982256e",
+	"00000000-0000-0000-0000-000000000000",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Shared',
+	'',
+	0);
+INSERT INTO S_DT
+	VALUES ("895d6388-4dab-4347-9ba7-a03ee9abb9fb",
+	"00000000-0000-0000-0000-000000000000",
+	'sequence of CardType',
+	'<definition>tmp</definition>
+<definition>tmp</definition>
+<definition>tmp</definition>
+',
+	'');
+INSERT INTO S_UDT
+	VALUES ("895d6388-4dab-4347-9ba7-a03ee9abb9fb",
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO PE_PE
+	VALUES ("895d6388-4dab-4347-9ba7-a03ee9abb9fb",
+	1,
+	"2dc09480-bb40-4305-aff7-75a75982256e",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO S_DT
+	VALUES ("7d89b0a0-ede0-4f28-a1b3-268b3fe9aa98",
+	"00000000-0000-0000-0000-000000000000",
+	'Game::CardType',
+	'<definition>tmp</definition>
+',
+	'');
+INSERT INTO S_UDT
+	VALUES ("7d89b0a0-ede0-4f28-a1b3-268b3fe9aa98",
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO PE_PE
+	VALUES ("7d89b0a0-ede0-4f28-a1b3-268b3fe9aa98",
+	1,
+	"2dc09480-bb40-4305-aff7-75a75982256e",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO PE_PE
+	VALUES ("2dc09480-bb40-4305-aff7-75a75982256e",
+	1,
+	"31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	'',
+	0,
+	'../Cribbage.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	1,
+	'../../Cribbage.xtuml');

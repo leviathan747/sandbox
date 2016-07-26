@@ -1,0 +1,31 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("78f1a9d3-5c3b-49b4-8f69-7ccaf4e05d53",
+	"00000000-0000-0000-0000-000000000000",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("78f1a9d3-5c3b-49b4-8f69-7ccaf4e05d53",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"44582005-5003-49ae-b0df-852d8d82944e",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("44582005-5003-49ae-b0df-852d8d82944e",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Cribbage',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../Cribbage.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	1,
+	'../../../Cribbage.xtuml');

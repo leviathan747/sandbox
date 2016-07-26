@@ -1,0 +1,32 @@
+-- BP 7.1.6 content: SystemModel syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO S_SYS
+	VALUES ("04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	1);
+INSERT INTO GD_MD
+	VALUES ("8d899e67-e632-4cf5-b59d-89abda20645d",
+	108,
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	92,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'Cribbage');
+INSERT INTO DIM_DIA
+	VALUES ("8d899e67-e632-4cf5-b59d-89abda20645d",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");

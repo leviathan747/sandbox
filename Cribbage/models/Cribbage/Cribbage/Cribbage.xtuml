@@ -1,0 +1,192 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	"04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	'',
+	0);
+INSERT INTO CL_IC
+	VALUES ("4829f89b-ca4e-435b-955e-057e77c4e2f4",
+	"04f45232-50ad-45c6-93ce-8ac4aa295400",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Game::Game::Game',
+	'
+');
+INSERT INTO CL_POR
+	VALUES ("4829f89b-ca4e-435b-955e-057e77c4e2f4",
+	"3633d036-717b-451d-b27d-7d0db97a4ab9",
+	'PlayerLogic',
+	"54b5a3dd-b27e-4a25-920d-15b2297cf0ef");
+INSERT INTO CL_IIR
+	VALUES ("0fd74e94-d86c-453d-be50-64d400cbe5a8",
+	"a7e66a9e-8d13-404e-bfc5-aa1404b83d95",
+	"54b5a3dd-b27e-4a25-920d-15b2297cf0ef",
+	"00000000-0000-0000-0000-000000000000",
+	'GamePlayerLogic',
+	'');
+INSERT INTO CL_IR
+	VALUES ("0fd74e94-d86c-453d-be50-64d400cbe5a8",
+	"00000000-0000-0000-0000-000000000000",
+	'GamePlayerLogic',
+	'');
+INSERT INTO C_IR_PROXY
+	VALUES ("a7e66a9e-8d13-404e-bfc5-aa1404b83d95",
+	"8646ef94-8f41-42bc-b543-9a0f779dd5ef",
+	"00000000-0000-0000-0000-000000000000",
+	"9644b586-23f1-4bdd-92a9-68fbc8672645",
+	'../../../../Game/models/Game/Game/Game/Game.xtuml');
+INSERT INTO C_PO_PROXY
+	VALUES ("3633d036-717b-451d-b27d-7d0db97a4ab9",
+	"00000000-0000-0000-0000-000000000000",
+	'PlayerLogic',
+	0,
+	1,
+	'../../../../Game/models/Game/Game/Game/Game.xtuml');
+INSERT INTO CL_POR
+	VALUES ("4829f89b-ca4e-435b-955e-057e77c4e2f4",
+	"da2b8536-da06-45a2-8d6d-0b730cf73b8d",
+	'Game',
+	"732d67ef-f2f9-4749-ad79-ab500aa04f12");
+INSERT INTO CL_IIR
+	VALUES ("185cde43-b775-4d73-af6b-64019f4124f1",
+	"add9f8c6-0dc0-449a-bc5b-ed81288a5457",
+	"732d67ef-f2f9-4749-ad79-ab500aa04f12",
+	"00000000-0000-0000-0000-000000000000",
+	'Game',
+	'');
+INSERT INTO CL_IP
+	VALUES ("185cde43-b775-4d73-af6b-64019f4124f1",
+	'Game',
+	'');
+INSERT INTO C_IR_PROXY
+	VALUES ("add9f8c6-0dc0-449a-bc5b-ed81288a5457",
+	"168ededb-afbd-4f04-ae2f-e8835880eb50",
+	"00000000-0000-0000-0000-000000000000",
+	"6caa75e0-8fe8-44b4-9bab-a65269049fab",
+	'../../../../Game/models/Game/Game/Game/Game.xtuml');
+INSERT INTO C_PO_PROXY
+	VALUES ("da2b8536-da06-45a2-8d6d-0b730cf73b8d",
+	"00000000-0000-0000-0000-000000000000",
+	'Game',
+	0,
+	1,
+	'../../../../Game/models/Game/Game/Game/Game.xtuml');
+INSERT INTO PE_PE
+	VALUES ("4829f89b-ca4e-435b-955e-057e77c4e2f4",
+	1,
+	"31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	"00000000-0000-0000-0000-000000000000",
+	21);
+INSERT INTO C_C_PROXY
+	VALUES ("04f45232-50ad-45c6-93ce-8ac4aa295400",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Game',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../../../../Game/models/Game/Game/Game/Game.xtuml');
+INSERT INTO CL_IC
+	VALUES ("2fb5817c-839a-448c-b65e-2064b73a1ca4",
+	"467dfe2c-8811-4da9-8843-c3f036327f04",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Logic::Logic::Logic',
+	'
+');
+INSERT INTO CL_POR
+	VALUES ("2fb5817c-839a-448c-b65e-2064b73a1ca4",
+	"f00835c5-b7e6-4cbd-9900-1ff8ffdf862d",
+	'Logic',
+	"80a4c9dd-ffe9-4666-83a7-301be6496745");
+INSERT INTO CL_IIR
+	VALUES ("740712a0-285f-4572-84c1-3e37336e8304",
+	"4975b4a5-40c7-489f-93fd-0fbe540b59f9",
+	"80a4c9dd-ffe9-4666-83a7-301be6496745",
+	"00000000-0000-0000-0000-000000000000",
+	'Logic',
+	'');
+INSERT INTO CL_IP
+	VALUES ("740712a0-285f-4572-84c1-3e37336e8304",
+	'Logic',
+	'');
+INSERT INTO C_IR_PROXY
+	VALUES ("4975b4a5-40c7-489f-93fd-0fbe540b59f9",
+	"662fcb15-3c34-4462-94ae-9a96e28869c5",
+	"00000000-0000-0000-0000-000000000000",
+	"51712c02-71a3-4f64-bc1b-c414634dcc12",
+	'../../../../Logic/models/Logic/Logic/Logic/Logic.xtuml');
+INSERT INTO C_PO_PROXY
+	VALUES ("f00835c5-b7e6-4cbd-9900-1ff8ffdf862d",
+	"00000000-0000-0000-0000-000000000000",
+	'Logic',
+	0,
+	1,
+	'../../../../Logic/models/Logic/Logic/Logic/Logic.xtuml');
+INSERT INTO CL_POR
+	VALUES ("2fb5817c-839a-448c-b65e-2064b73a1ca4",
+	"fd46736f-934a-498d-804b-5b275a121053",
+	'GameControl',
+	"195bbdb9-c148-49af-bd7a-71059c8ad10e");
+INSERT INTO CL_IIR
+	VALUES ("3c48c474-cc6c-48e6-ac02-cffd74cfe0f4",
+	"5901f89f-7e68-4389-806e-8d3d1e44fbae",
+	"195bbdb9-c148-49af-bd7a-71059c8ad10e",
+	"00000000-0000-0000-0000-000000000000",
+	'LogicGameControl',
+	'');
+INSERT INTO CL_IR
+	VALUES ("3c48c474-cc6c-48e6-ac02-cffd74cfe0f4",
+	"00000000-0000-0000-0000-000000000000",
+	'LogicGameControl',
+	'');
+INSERT INTO C_IR_PROXY
+	VALUES ("5901f89f-7e68-4389-806e-8d3d1e44fbae",
+	"952b4d2d-46d3-453e-9771-4155cc350ddc",
+	"00000000-0000-0000-0000-000000000000",
+	"769de57a-1da7-4075-a92c-d91cd6b2edb4",
+	'../../../../Logic/models/Logic/Logic/Logic/Logic.xtuml');
+INSERT INTO C_PO_PROXY
+	VALUES ("fd46736f-934a-498d-804b-5b275a121053",
+	"00000000-0000-0000-0000-000000000000",
+	'GameControl',
+	0,
+	1,
+	'../../../../Logic/models/Logic/Logic/Logic/Logic.xtuml');
+INSERT INTO PE_PE
+	VALUES ("2fb5817c-839a-448c-b65e-2064b73a1ca4",
+	1,
+	"31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	"00000000-0000-0000-0000-000000000000",
+	21);
+INSERT INTO C_C_PROXY
+	VALUES ("467dfe2c-8811-4da9-8843-c3f036327f04",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Logic',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../../../../Logic/models/Logic/Logic/Logic/Logic.xtuml');
+INSERT INTO PE_PE
+	VALUES ("31f0f396-07d7-4a2a-ac9d-695a088ae735",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("04e19944-c0ed-4ace-9b04-f42687a4c279",
+	'Cribbage',
+	1,
+	'../Cribbage.xtuml');
