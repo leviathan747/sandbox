@@ -1,0 +1,10 @@
+Initializing MASL export...
+cat /Users/levistarrett/xtuml/workspace-testbp/SAC/gen/code_generation/a.xtuml | x2m -i/Users/levistarrett/xtuml/workspace-testbp/SAC  -dSAC -k | masl  -i/Users/levistarrett/xtuml/workspace-testbp/SAC  -dSAC -o/Users/levistarrett/xtuml/workspace-testbp/SAC/masl/
+Unknown option character 'k'.
+103 ___ info ___ Starting domain.
+UserEmptyHandleDetectedCallout element masl_element_R3784_Unlink_has_current.
+UserEmptyHandleDetectedCallout element masl_element_R3787_Link_child_of.
+104 ___ info ___ Done.
+UserEmptyHandleDetectedCallout element masl_element_R3784_Link_has_current.
+java -cp /Users/levistarrett/xtuml/m585/Eclipse.app/Contents/Eclipse//tools/mc/bin//antlr-3.5.2-complete.jar:/Users/levistarrett/xtuml/m585/Eclipse.app/Contents/Eclipse//tools/mc/bin//MASLParser.jar MaslFormatter -r -i /Users/levistarrett/xtuml/workspace-testbp/SAC/masl//SAC.orig -o /Users/levistarrett/xtuml/workspace-testbp/SAC/masl//SAC
+Done.
