@@ -1,0 +1,5 @@
+public instance service MASLTemplate::mid2.mid2op () is
+begin
+  null;
+end service;
+
