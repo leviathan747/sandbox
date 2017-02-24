@@ -1,0 +1,62 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94",
+	'Spec',
+	1,
+	'Spec',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("2c77c4c6-8dc9-47a7-828c-017a2f5d260d",
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94");
+INSERT INTO O_BATTR
+	VALUES ("2c77c4c6-8dc9-47a7-828c-017a2f5d260d",
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94");
+INSERT INTO O_ATTR
+	VALUES ("2c77c4c6-8dc9-47a7-828c-017a2f5d260d",
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94",
+	"00000000-0000-0000-0000-000000000000",
+	'spec_id',
+	'',
+	'',
+	'spec_id',
+	0,
+	"9ee7b20f-8045-43d7-8527-a57091b646c5",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9ee7b20f-8045-43d7-8527-a57091b646c5",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94");
+INSERT INTO O_OIDA
+	VALUES ("2c77c4c6-8dc9-47a7-828c-017a2f5d260d",
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94",
+	0,
+	'spec_id');
+INSERT INTO O_ID
+	VALUES (1,
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94");
+INSERT INTO O_ID
+	VALUES (2,
+	"3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94");
+INSERT INTO PE_PE
+	VALUES ("3e6b59c8-d4e5-4d77-9e50-f43cb9f0fa94",
+	1,
+	"4318c2d3-8f36-4be3-9233-2f396f35e6c1",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("4318c2d3-8f36-4be3-9233-2f396f35e6c1",
+	"00000000-0000-0000-0000-000000000000",
+	"5f1a6c30-6c75-47bf-9edb-7033f8c317f0",
+	'DuplicateRefAtts',
+	'',
+	0,
+	'../DuplicateRefAtts.xtuml');

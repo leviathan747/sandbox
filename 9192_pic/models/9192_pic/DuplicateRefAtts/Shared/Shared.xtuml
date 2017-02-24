@@ -1,0 +1,54 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("a235d549-63d3-4aa0-8908-5edf17f66f45",
+	"00000000-0000-0000-0000-000000000000",
+	"5f1a6c30-6c75-47bf-9edb-7033f8c317f0",
+	'Shared',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("4cc8a6b7-a50c-4023-bd45-93b0aa5e8a98",
+	112,
+	"a235d549-63d3-4aa0-8908-5edf17f66f45",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'9192_pic::DuplicateRefAtts::Shared');
+INSERT INTO DIM_DIA
+	VALUES ("4cc8a6b7-a50c-4023-bd45-93b0aa5e8a98",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("a235d549-63d3-4aa0-8908-5edf17f66f45",
+	1,
+	"0bffc372-0c84-46a0-a223-b1cb2a4ddf34",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("0bffc372-0c84-46a0-a223-b1cb2a4ddf34",
+	"5f1a6c30-6c75-47bf-9edb-7033f8c317f0",
+	"5f1a6c30-6c75-47bf-9edb-7033f8c317f0",
+	'DuplicateRefAtts',
+	'masl_domain',
+	0,
+	'../DuplicateRefAtts.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("5f1a6c30-6c75-47bf-9edb-7033f8c317f0",
+	'9192_pic',
+	1,
+	'../../9192_pic.xtuml');
