@@ -1,0 +1,118 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("3e3fd51c-e6f7-498c-af88-f7544abb6368",
+	"00000000-0000-0000-0000-000000000000",
+	'SACSystem_Configuration',
+	'');
+INSERT INTO C_EP
+	VALUES ("ac44de3c-36f0-43eb-a3b3-aced4a4afa50",
+	"3e3fd51c-e6f7-498c-af88-f7544abb6368",
+	0,
+	'get_groups',
+	'');
+INSERT INTO C_IO
+	VALUES ("ac44de3c-36f0-43eb-a3b3-aced4a4afa50",
+	"3c30c948-f2a9-450c-bff2-345adf184458",
+	'get_groups',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("3c30c948-f2a9-450c-bff2-345adf184458",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_PP
+	VALUES ("758752de-d98b-4351-a910-ec9413e00bc8",
+	"ac44de3c-36f0-43eb-a3b3-aced4a4afa50",
+	"275c0e2a-ae76-453d-b25e-ed4753313111",
+	'groups',
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("275c0e2a-ae76-453d-b25e-ed4753313111",
+	"00000000-0000-0000-0000-000000000000",
+	'sequence of group_type',
+	'',
+	'',
+	'../Shared.xtuml');
+INSERT INTO C_EP
+	VALUES ("27d5177d-fae4-475b-8652-6e506965fa47",
+	"3e3fd51c-e6f7-498c-af88-f7544abb6368",
+	0,
+	'get_session_specification',
+	'');
+INSERT INTO C_IO
+	VALUES ("27d5177d-fae4-475b-8652-6e506965fa47",
+	"3c30c948-f2a9-450c-bff2-345adf184458",
+	'get_session_specification',
+	'',
+	0,
+	'',
+	"ac44de3c-36f0-43eb-a3b3-aced4a4afa50");
+INSERT INTO C_PP
+	VALUES ("05989588-503f-4847-9b0b-04b82128b205",
+	"27d5177d-fae4-475b-8652-6e506965fa47",
+	"4e7bc5c7-10ba-4629-9911-e2aaba6a04d0",
+	'heartbeat_time',
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("4e7bc5c7-10ba-4629-9911-e2aaba6a04d0",
+	"00000000-0000-0000-0000-000000000000",
+	'duration',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_PP
+	VALUES ("c6641ff2-d160-4b2b-a79b-2951358e1be1",
+	"27d5177d-fae4-475b-8652-6e506965fa47",
+	"5a63953a-f578-4786-9d9d-4b45b42879c1",
+	'heartbeat_failure_threshold',
+	'',
+	1,
+	'',
+	"05989588-503f-4847-9b0b-04b82128b205");
+INSERT INTO S_DT_PROXY
+	VALUES ("5a63953a-f578-4786-9d9d-4b45b42879c1",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_EP
+	VALUES ("f04c9678-bcb0-49c6-8618-b123d4bf8a25",
+	"3e3fd51c-e6f7-498c-af88-f7544abb6368",
+	0,
+	'reload_config_files',
+	'');
+INSERT INTO C_IO
+	VALUES ("f04c9678-bcb0-49c6-8618-b123d4bf8a25",
+	"3c30c948-f2a9-450c-bff2-345adf184458",
+	'reload_config_files',
+	'',
+	0,
+	'',
+	"27d5177d-fae4-475b-8652-6e506965fa47");
+INSERT INTO PE_PE
+	VALUES ("3e3fd51c-e6f7-498c-af88-f7544abb6368",
+	1,
+	"21c3afc9-e9f7-4c7f-8a15-d48b452178ad",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("21c3afc9-e9f7-4c7f-8a15-d48b452178ad",
+	"00000000-0000-0000-0000-000000000000",
+	"68c671da-4884-4b2f-b499-46eb62c2e998",
+	'Shared',
+	'',
+	0,
+	'../Shared.xtuml');
