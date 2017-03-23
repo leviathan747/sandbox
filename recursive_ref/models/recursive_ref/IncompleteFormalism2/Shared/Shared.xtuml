@@ -1,0 +1,54 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("8ab8ce92-cff5-463e-b121-15c2027af2ef",
+	"00000000-0000-0000-0000-000000000000",
+	"e04ed6ec-4ba0-48c6-a455-4abdb7b528cc",
+	'Shared',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("63634751-17bf-4e04-b594-b1891a295376",
+	112,
+	"8ab8ce92-cff5-463e-b121-15c2027af2ef",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'recursive_ref::IncompleteFormalism2::Shared');
+INSERT INTO DIM_DIA
+	VALUES ("63634751-17bf-4e04-b594-b1891a295376",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("8ab8ce92-cff5-463e-b121-15c2027af2ef",
+	1,
+	"21144c13-9f9a-4897-af93-6982ded2c8dd",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("21144c13-9f9a-4897-af93-6982ded2c8dd",
+	"e04ed6ec-4ba0-48c6-a455-4abdb7b528cc",
+	"e04ed6ec-4ba0-48c6-a455-4abdb7b528cc",
+	'IncompleteFormalism2',
+	'masl_domain',
+	0,
+	'../IncompleteFormalism2.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("e04ed6ec-4ba0-48c6-a455-4abdb7b528cc",
+	'recursive_ref',
+	1,
+	'../../recursive_ref.xtuml');
