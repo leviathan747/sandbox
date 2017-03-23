@@ -1,0 +1,148 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("7f424467-826a-4966-8d6a-79d82e4ec471",
+	'Actor',
+	1,
+	'Actor',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("cdf5941d-2770-428d-8b58-0a3197747434",
+	"7f424467-826a-4966-8d6a-79d82e4ec471");
+INSERT INTO O_BATTR
+	VALUES ("cdf5941d-2770-428d-8b58-0a3197747434",
+	"7f424467-826a-4966-8d6a-79d82e4ec471");
+INSERT INTO O_ATTR
+	VALUES ("cdf5941d-2770-428d-8b58-0a3197747434",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	"00000000-0000-0000-0000-000000000000",
+	'name',
+	'',
+	'',
+	'name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("7f424467-826a-4966-8d6a-79d82e4ec471",
+	"8e8f9e83-c035-4e81-9a1f-d4c71c27e851",
+	0,
+	"68d95009-716a-4223-9653-6f9c0b9471ce",
+	"6c796e5a-186f-4cab-a0fa-f8efae74c07e",
+	"6509a943-63ed-4df9-80ab-cda93a3cffaf",
+	"ec84210e-3ce5-4fbe-884b-1da1f7f8a897",
+	"b967b918-27f7-4023-95e9-1e563f50ddc9",
+	"226e7d7d-3288-4b67-abfe-8ec2ca4ca165",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Appearance',
+	'actor_name',
+	'R2.''debuts_in''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("7f424467-826a-4966-8d6a-79d82e4ec471",
+	"6c796e5a-186f-4cab-a0fa-f8efae74c07e",
+	"6509a943-63ed-4df9-80ab-cda93a3cffaf",
+	'../classes.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("68d95009-716a-4223-9653-6f9c0b9471ce",
+	"8e8f9e83-c035-4e81-9a1f-d4c71c27e851",
+	0,
+	"6c796e5a-186f-4cab-a0fa-f8efae74c07e",
+	"ec84210e-3ce5-4fbe-884b-1da1f7f8a897",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("b967b918-27f7-4023-95e9-1e563f50ddc9",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	"cdf5941d-2770-428d-8b58-0a3197747434",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	1,
+	'name');
+INSERT INTO O_ATTR
+	VALUES ("b967b918-27f7-4023-95e9-1e563f50ddc9",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	"cdf5941d-2770-428d-8b58-0a3197747434",
+	'name',
+	'',
+	'',
+	'actor_name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("7f424467-826a-4966-8d6a-79d82e4ec471",
+	"8e8f9e83-c035-4e81-9a1f-d4c71c27e851",
+	0,
+	"70225680-ddd3-42cf-81d3-8824647a327e",
+	"6c796e5a-186f-4cab-a0fa-f8efae74c07e",
+	"6509a943-63ed-4df9-80ab-cda93a3cffaf",
+	"ec84210e-3ce5-4fbe-884b-1da1f7f8a897",
+	"86a7f447-bdaa-4acc-bd5c-68622db93b22",
+	"d250a517-09e6-4302-a568-84ffe8b54ff7",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Appearance',
+	'film_name',
+	'R2.''debuts_in''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("70225680-ddd3-42cf-81d3-8824647a327e",
+	"8e8f9e83-c035-4e81-9a1f-d4c71c27e851",
+	0,
+	"6c796e5a-186f-4cab-a0fa-f8efae74c07e",
+	"ec84210e-3ce5-4fbe-884b-1da1f7f8a897",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("86a7f447-bdaa-4acc-bd5c-68622db93b22",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	"a141f5a6-5c7b-4bf7-858f-1ce1336af571",
+	"d8768c6a-f5dd-40e3-8c50-e8e8848f6fcf",
+	1,
+	'name');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("a141f5a6-5c7b-4bf7-858f-1ce1336af571",
+	"d8768c6a-f5dd-40e3-8c50-e8e8848f6fcf",
+	'../Film/Film.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("86a7f447-bdaa-4acc-bd5c-68622db93b22",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	"b967b918-27f7-4023-95e9-1e563f50ddc9",
+	'debut_film_name',
+	'',
+	'debut_film_',
+	'film_name',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"7f424467-826a-4966-8d6a-79d82e4ec471");
+INSERT INTO O_OIDA
+	VALUES ("cdf5941d-2770-428d-8b58-0a3197747434",
+	"7f424467-826a-4966-8d6a-79d82e4ec471",
+	0,
+	'name');
+INSERT INTO O_ID
+	VALUES (1,
+	"7f424467-826a-4966-8d6a-79d82e4ec471");
+INSERT INTO O_ID
+	VALUES (2,
+	"7f424467-826a-4966-8d6a-79d82e4ec471");
+INSERT INTO PE_PE
+	VALUES ("7f424467-826a-4966-8d6a-79d82e4ec471",
+	1,
+	"edc12428-41ca-4f53-903a-1ac0c48b006f",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("edc12428-41ca-4f53-903a-1ac0c48b006f",
+	"78b4de85-b4cc-4844-870d-37aa30570ac7",
+	"78b4de85-b4cc-4844-870d-37aa30570ac7",
+	'classes',
+	'',
+	0,
+	'../classes.xtuml');
