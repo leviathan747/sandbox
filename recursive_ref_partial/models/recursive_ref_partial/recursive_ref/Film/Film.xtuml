@@ -49,7 +49,7 @@ INSERT INTO EP_PKG_PROXY
 	VALUES ("edc12428-41ca-4f53-903a-1ac0c48b006f",
 	"78b4de85-b4cc-4844-870d-37aa30570ac7",
 	"78b4de85-b4cc-4844-870d-37aa30570ac7",
-	'classes',
+	'recursive_ref',
 	'',
 	0,
-	'../classes.xtuml');
+	'../recursive_ref.xtuml');

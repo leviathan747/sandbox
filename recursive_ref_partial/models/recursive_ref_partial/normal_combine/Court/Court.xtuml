@@ -1,0 +1,111 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	'Court',
+	2,
+	'Court',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("25a749de-086f-4d3d-8ac0-642ed739551b",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6");
+INSERT INTO O_BATTR
+	VALUES ("25a749de-086f-4d3d-8ac0-642ed739551b",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6");
+INSERT INTO O_ATTR
+	VALUES ("25a749de-086f-4d3d-8ac0-642ed739551b",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	"00000000-0000-0000-0000-000000000000",
+	'judge_name',
+	'',
+	'',
+	'judge_name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	"076452c8-2b04-447f-b82b-5880738deb0f",
+	0,
+	"bd9052e3-557c-456e-bf6b-123468492db1",
+	"ab5c11c6-3a69-4838-88de-d9d7c8682e11",
+	"f5030322-c358-464c-ad4e-e7a0e4811b5d",
+	"54d61799-5be8-4ceb-aa9b-e696220cd1dc",
+	"d19cfbbb-fa80-421c-933c-349288527b13",
+	"b71b0aa1-29e7-4b65-89e7-d531df07685d",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Jurisdiction',
+	'locale',
+	'R2.''operates_in''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	"ab5c11c6-3a69-4838-88de-d9d7c8682e11",
+	"f5030322-c358-464c-ad4e-e7a0e4811b5d",
+	'../normal_combine.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("bd9052e3-557c-456e-bf6b-123468492db1",
+	"076452c8-2b04-447f-b82b-5880738deb0f",
+	0,
+	"ab5c11c6-3a69-4838-88de-d9d7c8682e11",
+	"54d61799-5be8-4ceb-aa9b-e696220cd1dc",
+	'../normal_combine.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("d19cfbbb-fa80-421c-933c-349288527b13",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	"bd9052e3-557c-456e-bf6b-123468492db1",
+	"076452c8-2b04-447f-b82b-5880738deb0f",
+	1,
+	'locale');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("bd9052e3-557c-456e-bf6b-123468492db1",
+	"076452c8-2b04-447f-b82b-5880738deb0f",
+	'../Jurisdiction/Jurisdiction.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("d19cfbbb-fa80-421c-933c-349288527b13",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	"25a749de-086f-4d3d-8ac0-642ed739551b",
+	'locale',
+	'',
+	'',
+	'locale',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6");
+INSERT INTO O_OIDA
+	VALUES ("25a749de-086f-4d3d-8ac0-642ed739551b",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	0,
+	'judge_name');
+INSERT INTO O_OIDA
+	VALUES ("d19cfbbb-fa80-421c-933c-349288527b13",
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	0,
+	'locale');
+INSERT INTO O_ID
+	VALUES (1,
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6");
+INSERT INTO O_ID
+	VALUES (2,
+	"1dd59bbc-cd57-4225-9920-3afdd489f9e6");
+INSERT INTO PE_PE
+	VALUES ("1dd59bbc-cd57-4225-9920-3afdd489f9e6",
+	1,
+	"a47311e0-02f5-4d4f-ae1e-523c4195138f",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("a47311e0-02f5-4d4f-ae1e-523c4195138f",
+	"78b4de85-b4cc-4844-870d-37aa30570ac7",
+	"78b4de85-b4cc-4844-870d-37aa30570ac7",
+	'normal_combine',
+	'',
+	0,
+	'../normal_combine.xtuml');
