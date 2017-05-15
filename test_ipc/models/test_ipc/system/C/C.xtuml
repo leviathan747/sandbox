@@ -1,0 +1,60 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	"00000000-0000-0000-0000-000000000000",
+	'C',
+	'');
+INSERT INTO C_EP
+	VALUES ("cc962d8c-2692-4314-b4d9-68aecedf0139",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'test',
+	'');
+INSERT INTO C_AS
+	VALUES ("cc962d8c-2692-4314-b4d9-68aecedf0139",
+	'test',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("e3639164-5502-4fe4-a92c-e15458aee286",
+	"cc962d8c-2692-4314-b4d9-68aecedf0139",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'int_param',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("ba19c323-3d4f-40e5-aaa8-fcbc163a0498",
+	"cc962d8c-2692-4314-b4d9-68aecedf0139",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'bool_param',
+	'',
+	0,
+	'',
+	"e3639164-5502-4fe4-a92c-e15458aee286");
+INSERT INTO C_PP
+	VALUES ("2f279918-a90d-4581-b4c3-32a62e7dd265",
+	"cc962d8c-2692-4314-b4d9-68aecedf0139",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'string_param',
+	'',
+	0,
+	'',
+	"ba19c323-3d4f-40e5-aaa8-fcbc163a0498");
+INSERT INTO PE_PE
+	VALUES ("40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	1,
+	"58dc2d9d-c4a9-4b01-8655-f72c7b055364",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("58dc2d9d-c4a9-4b01-8655-f72c7b055364",
+	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
+	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
+	'system',
+	'',
+	0,
+	'../system.xtuml');
