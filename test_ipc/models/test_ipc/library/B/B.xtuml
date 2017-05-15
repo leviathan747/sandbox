@@ -28,14 +28,14 @@ INSERT INTO GD_MD
 	150,
 	0,
 	'',
-	'test_ipc::system::B');
+	'test_ipc::library::B');
 INSERT INTO GD_GE
 	VALUES ("f0951835-30d1-4598-9e55-bb8f12b17a25",
 	"cfe6ded2-32e5-4fe2-a8c5-255a8df8fcbc",
 	"98d8ea18-077c-4dca-9af1-52b24db8cd14",
 	103,
 	0,
-	'test_ipc::system::B');
+	'test_ipc::library::B');
 INSERT INTO GD_SHP
 	VALUES ("f0951835-30d1-4598-9e55-bb8f12b17a25");
 INSERT INTO GD_CTR
@@ -64,7 +64,7 @@ INSERT INTO GD_GE
 	"d3647965-5633-4be0-8180-37f143e2b787",
 	93,
 	0,
-	'test_ipc::system::B::Aport::C');
+	'test_ipc::library::B::Aport::C');
 INSERT INTO GD_CON
 	VALUES ("0b0f35cb-e7e1-40b5-b3d7-b613845917b1",
 	"00000000-0000-0000-0000-000000000000");
@@ -164,7 +164,7 @@ INSERT INTO GD_GE
 	"92e36797-5426-41c1-ab7f-5f6ff51bb0f1",
 	108,
 	0,
-	'test_ipc::system::B::functions');
+	'test_ipc::library::B::functions');
 INSERT INTO GD_SHP
 	VALUES ("dac3ffa7-315a-4d80-9f1c-f0031a7a3eac");
 INSERT INTO GD_NCS
@@ -215,7 +215,7 @@ INSERT INTO SPR_RS
 	'test',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("cc962d8c-2692-4314-b4d9-68aecedf0139",
@@ -240,7 +240,7 @@ INSERT INTO EP_PKG_PROXY
 	VALUES ("58dc2d9d-c4a9-4b01-8655-f72c7b055364",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
-	'system',
+	'library',
 	'',
 	0,
-	'../system.xtuml');
+	'../library.xtuml');

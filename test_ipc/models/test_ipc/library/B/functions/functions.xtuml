@@ -25,7 +25,7 @@ INSERT INTO GD_MD
 	0,
 	0,
 	'',
-	'test_ipc::system::B::functions');
+	'test_ipc::library::B::functions');
 INSERT INTO DIM_DIA
 	VALUES ("2681601f-de1f-4d44-b4c2-82ebe0b59ce6",
 	'',

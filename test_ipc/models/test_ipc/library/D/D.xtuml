@@ -28,14 +28,14 @@ INSERT INTO GD_MD
 	0,
 	0,
 	'',
-	'test_ipc::system::D');
+	'test_ipc::library::D');
 INSERT INTO GD_GE
 	VALUES ("287bd8a5-29d0-4a33-ada4-fbae42382442",
 	"82886427-29f5-44de-b4da-a8f5bc004eff",
 	"888a08b3-10cf-48ea-9e56-f20dcf2f44c8",
 	103,
 	0,
-	'test_ipc::system::D');
+	'test_ipc::library::D');
 INSERT INTO GD_SHP
 	VALUES ("287bd8a5-29d0-4a33-ada4-fbae42382442");
 INSERT INTO GD_CTR
@@ -69,7 +69,7 @@ INSERT INTO GD_GE
 	"bbe932fb-a8df-468f-97b3-f278bae83c37",
 	94,
 	0,
-	'test_ipc::system::D::INTERFACE_PROVIDER::ChannelSpecification');
+	'test_ipc::library::D::INTERFACE_PROVIDER::ChannelSpecification');
 INSERT INTO GD_CON
 	VALUES ("d44d121f-ed16-4833-9565-6d8838da3bbb",
 	"00000000-0000-0000-0000-000000000000");
@@ -169,7 +169,7 @@ INSERT INTO GD_GE
 	"df222535-ec14-4447-a9fe-209381007c70",
 	94,
 	0,
-	'test_ipc::system::D::INTERFACE_REQUIRER::ChannelSpecification');
+	'test_ipc::library::D::INTERFACE_REQUIRER::ChannelSpecification');
 INSERT INTO GD_CON
 	VALUES ("cdd492e3-a1d4-464f-a7b6-69ad2bb95857",
 	"00000000-0000-0000-0000-000000000000");
@@ -296,7 +296,7 @@ INSERT INTO SPR_PS
 	'send',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("147e3841-4e59-414e-9035-cd2d888a405b",
@@ -314,7 +314,7 @@ INSERT INTO SPR_PS
 	'initialize',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("5f9dda80-2839-4d7b-8b18-c5d37f584f7f",
@@ -332,7 +332,7 @@ INSERT INTO SPR_PS
 	'recv',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("3422bd7f-825e-420d-b3bb-b85adfed22a5",
@@ -373,7 +373,7 @@ INSERT INTO SPR_PS
 	'send',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO SPR_PEP
 	VALUES ("65e165e1-8aad-4fac-893d-743abe00fee1",
@@ -384,7 +384,7 @@ INSERT INTO SPR_PS
 	'initialize',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO SPR_PEP
 	VALUES ("dd91eb4f-4f0e-473c-8058-7fad5a7e9823",
@@ -395,7 +395,7 @@ INSERT INTO SPR_PS
 	'recv',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO PE_PE
 	VALUES ("888a08b3-10cf-48ea-9e56-f20dcf2f44c8",
@@ -407,7 +407,7 @@ INSERT INTO EP_PKG_PROXY
 	VALUES ("58dc2d9d-c4a9-4b01-8655-f72c7b055364",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
-	'system',
+	'library',
 	'',
 	0,
-	'../system.xtuml');
+	'../library.xtuml');

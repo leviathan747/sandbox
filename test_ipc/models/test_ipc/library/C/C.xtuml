@@ -54,7 +54,7 @@ INSERT INTO EP_PKG_PROXY
 	VALUES ("58dc2d9d-c4a9-4b01-8655-f72c7b055364",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
 	"cc0109d1-5ebc-4d01-8e94-ee48ce299dc1",
-	'system',
+	'library',
 	'',
 	0,
-	'../system.xtuml');
+	'../library.xtuml');
