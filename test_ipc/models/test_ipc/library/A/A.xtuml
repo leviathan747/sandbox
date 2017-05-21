@@ -191,7 +191,9 @@ INSERT INTO SPR_PS
 	'test',
 	'',
 	'LOG::LogInfo( message:"Receiving message" );
-LOG::LogInfo( message:param.string_param );',
+LOG::LogInfo( message:param.string_param );
+LOG::LogInteger( message:param.int_param );
+LOG::LogReal( message:"real value: ", r:param.real_param );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY

@@ -29,8 +29,8 @@ INSERT INTO C_PP
 INSERT INTO C_PP
 	VALUES ("ba19c323-3d4f-40e5-aaa8-fcbc163a0498",
 	"cc962d8c-2692-4314-b4d9-68aecedf0139",
-	"ba5eda7a-def5-0000-0000-000000000001",
-	'bool_param',
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'real_param',
 	'',
 	0,
 	'',

@@ -38,7 +38,7 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'send_message',
 	'',
-	'send Aport::test( int_param:1, bool_param:true, string_param:"Levi loves Courtney" );',
+	'send Aport::test( int_param:500, real_param:5.5, string_param:"Levi loves Courtney" );',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
