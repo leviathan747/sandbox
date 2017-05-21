@@ -214,7 +214,7 @@ INSERT INTO SPR_RS
 	VALUES ("75dbb64a-6fd2-49cd-b33e-babd08bb31c4",
 	'test',
 	'',
-	'',
+	'LOG::LogInfo( message:"Sending message" );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY

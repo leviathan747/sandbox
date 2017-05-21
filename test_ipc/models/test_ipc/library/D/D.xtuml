@@ -350,7 +350,7 @@ INSERT INTO SPR_PO
 	'send_op',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("5ba08c66-61b4-4f36-9c00-6c6d423b277c",
@@ -368,7 +368,7 @@ INSERT INTO SPR_PO
 	'recv_op',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("9581376b-8218-48b8-9261-92c5e3da9510",
@@ -408,7 +408,7 @@ INSERT INTO SPR_PS
 	VALUES ("307a67e7-c534-479e-9d14-bdf5a6719e6d",
 	'send_sgn',
 	'',
-	'',
+	'send INTERFACE_PROVIDER::recv_sgn(name:param.name, parameters:param.parameters, to:param.to, from:param.from );',
 	1,
 	0);
 INSERT INTO SPR_PEP
@@ -442,7 +442,7 @@ INSERT INTO SPR_PO
 	'send_op',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO SPR_PEP
 	VALUES ("08414c95-b223-462a-a3d9-bc30b8fa1773",
@@ -453,7 +453,7 @@ INSERT INTO SPR_PO
 	'recv_op',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO PE_PE
 	VALUES ("888a08b3-10cf-48ea-9e56-f20dcf2f44c8",
