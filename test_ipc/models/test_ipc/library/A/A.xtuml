@@ -203,6 +203,43 @@ INSERT INTO C_EP_PROXY
 	'test',
 	'',
 	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("0587aaff-0ac6-42e2-912c-2e3f2da74d8c",
+	"f5fc254f-2479-4583-a4d5-1b8d481b69b7",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PO
+	VALUES ("0587aaff-0ac6-42e2-912c-2e3f2da74d8c",
+	'test2',
+	'',
+	'LOG::LogInfo( message:"Sending back a return value of 678" );
+return 678;',
+	1,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("f5fc254f-2479-4583-a4d5-1b8d481b69b7",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'test2',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("87530abc-354d-4f62-ac02-ec58a9990d85",
+	"5476c491-61ba-4503-a2af-6e7492e0c432",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PO
+	VALUES ("87530abc-354d-4f62-ac02-ec58a9990d85",
+	'test3',
+	'',
+	'return "hello there";',
+	1,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("5476c491-61ba-4503-a2af-6e7492e0c432",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'test3',
+	'',
+	'../C/C.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("40ef0e72-2cad-45e0-b420-0a8fcd874635",
 	"00000000-0000-0000-0000-000000000000",

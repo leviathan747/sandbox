@@ -224,6 +224,42 @@ INSERT INTO C_EP_PROXY
 	'test',
 	'',
 	'../C/C.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("83d0fbab-a2a7-4c9f-aa3f-5d51c3aa123d",
+	"f5fc254f-2479-4583-a4d5-1b8d481b69b7",
+	"d3647965-5633-4be0-8180-37f143e2b787");
+INSERT INTO SPR_RO
+	VALUES ("83d0fbab-a2a7-4c9f-aa3f-5d51c3aa123d",
+	'test2',
+	'',
+	'',
+	1,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("f5fc254f-2479-4583-a4d5-1b8d481b69b7",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'test2',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("b25d99dd-8bb6-48c2-accb-0bcc67c3e56b",
+	"5476c491-61ba-4503-a2af-6e7492e0c432",
+	"d3647965-5633-4be0-8180-37f143e2b787");
+INSERT INTO SPR_RO
+	VALUES ("b25d99dd-8bb6-48c2-accb-0bcc67c3e56b",
+	'test3',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("5476c491-61ba-4503-a2af-6e7492e0c432",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'test3',
+	'',
+	'../C/C.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("40ef0e72-2cad-45e0-b420-0a8fcd874635",
 	"00000000-0000-0000-0000-000000000000",
