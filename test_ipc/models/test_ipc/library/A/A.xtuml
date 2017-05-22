@@ -188,19 +188,16 @@ INSERT INTO SPR_PEP
 	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
 INSERT INTO SPR_PS
 	VALUES ("ba8d2e9f-4d42-4c7a-b6db-54ce70a27696",
-	'test',
+	'sgn1',
 	'',
-	'LOG::LogInfo( message:"Receiving message" );
-LOG::LogInfo( message:param.string_param );
-LOG::LogInteger( message:param.int_param );
-LOG::LogReal( message:"real value: ", r:param.real_param );',
+	'',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("cc962d8c-2692-4314-b4d9-68aecedf0139",
 	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
 	-1,
-	'test',
+	'sgn1',
 	'',
 	'../C/C.xtuml');
 INSERT INTO SPR_PEP
@@ -209,17 +206,16 @@ INSERT INTO SPR_PEP
 	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
 INSERT INTO SPR_PO
 	VALUES ("0587aaff-0ac6-42e2-912c-2e3f2da74d8c",
-	'test2',
+	'op1',
 	'',
-	'LOG::LogInfo( message:"Sending back a return value of 678" );
-return 678;',
+	'',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("f5fc254f-2479-4583-a4d5-1b8d481b69b7",
 	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
 	-1,
-	'test2',
+	'op1',
 	'',
 	'../C/C.xtuml');
 INSERT INTO SPR_PEP
@@ -228,16 +224,106 @@ INSERT INTO SPR_PEP
 	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
 INSERT INTO SPR_PO
 	VALUES ("87530abc-354d-4f62-ac02-ec58a9990d85",
-	'test3',
+	'op2',
 	'',
-	'return "hello there";',
+	'',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("5476c491-61ba-4503-a2af-6e7492e0c432",
 	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
 	-1,
-	'test3',
+	'op2',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("c9fa0072-39bd-4a36-aca7-d9d30ef1fcc0",
+	"9c2dfcbb-261e-4f56-af3c-cc4269335e4a",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PO
+	VALUES ("c9fa0072-39bd-4a36-aca7-d9d30ef1fcc0",
+	'op3',
+	'',
+	'',
+	1,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("9c2dfcbb-261e-4f56-af3c-cc4269335e4a",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'op3',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("ad66aee9-36c0-4d2c-a568-b9c19ad91c18",
+	"bd1b95af-7559-4843-bc3c-00cb70d37b33",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PO
+	VALUES ("ad66aee9-36c0-4d2c-a568-b9c19ad91c18",
+	'op4',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("bd1b95af-7559-4843-bc3c-00cb70d37b33",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'op4',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("22a201d4-8763-4634-af3b-8e4f99232bc9",
+	"a7b2baea-7847-48c6-84c2-9665f5c699af",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PS
+	VALUES ("22a201d4-8763-4634-af3b-8e4f99232bc9",
+	'sgn2',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("a7b2baea-7847-48c6-84c2-9665f5c699af",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'sgn2',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("47e93512-545e-415e-b7b7-7253d60b941b",
+	"0f260ab1-8ee0-4ae7-85c3-0ccc5b96a8b8",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PS
+	VALUES ("47e93512-545e-415e-b7b7-7253d60b941b",
+	'sgn3',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("0f260ab1-8ee0-4ae7-85c3-0ccc5b96a8b8",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'sgn3',
+	'',
+	'../C/C.xtuml');
+INSERT INTO SPR_PEP
+	VALUES ("0be78f8f-ae0c-4c98-9b9f-01436e584e17",
+	"877c3eed-313c-475f-9797-19a4233019bb",
+	"dadbfa35-f18d-4fbc-b678-71b96d34b6a0");
+INSERT INTO SPR_PS
+	VALUES ("0be78f8f-ae0c-4c98-9b9f-01436e584e17",
+	'sgn4',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("877c3eed-313c-475f-9797-19a4233019bb",
+	"40ef0e72-2cad-45e0-b420-0a8fcd874635",
+	-1,
+	'sgn4',
 	'',
 	'../C/C.xtuml');
 INSERT INTO C_I_PROXY
