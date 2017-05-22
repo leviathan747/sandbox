@@ -251,7 +251,7 @@ INSERT INTO SPR_RO
 	'test3',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("5476c491-61ba-4503-a2af-6e7492e0c432",
