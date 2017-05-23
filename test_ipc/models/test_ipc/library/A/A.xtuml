@@ -24,8 +24,8 @@ INSERT INTO GD_MD
 	1,
 	0,
 	0,
-	0,
-	0,
+	200,
+	150,
 	0,
 	'4.1.17',
 	'test_ipc::library::A');
@@ -41,7 +41,7 @@ INSERT INTO GD_SHP
 INSERT INTO GD_CTR
 	VALUES ("ad03b1db-fab7-48b2-b5b9-c96b399f5567");
 INSERT INTO DIM_ND
-	VALUES (800.000000,
+	VALUES (1032.000000,
 	800.000000,
 	"ad03b1db-fab7-48b2-b5b9-c96b399f5567");
 INSERT INTO DIM_GE
@@ -55,7 +55,7 @@ INSERT INTO DIM_ELE
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
 	VALUES ("ad1dab19-fca4-4f01-8a4f-19d7108aa2fa",
-	4900.000000,
+	5132.000000,
 	3486.000000,
 	"ad03b1db-fab7-48b2-b5b9-c96b399f5567");
 INSERT INTO GD_GE
@@ -133,14 +133,14 @@ INSERT INTO GD_LS
 	"76ab347c-3c68-4510-867d-56606e32d71a");
 INSERT INTO DIM_WAY
 	VALUES ("20ce1d58-3b46-4b9f-97ff-afafa14a38aa",
-	4900.000000,
+	5132.000000,
 	3486.000000,
 	"ecf1efa1-77f0-4dd7-acd5-49f11e056993",
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("76ab347c-3c68-4510-867d-56606e32d71a",
-	4975.000000,
+	5207.000000,
 	3486.000000,
 	"ecf1efa1-77f0-4dd7-acd5-49f11e056993",
 	"00000000-0000-0000-0000-000000000000",
@@ -158,6 +158,30 @@ INSERT INTO DIM_ED
 	VALUES ("ad1dab19-fca4-4f01-8a4f-19d7108aa2fa",
 	"00000000-0000-0000-0000-000000000000",
 	"ecf1efa1-77f0-4dd7-acd5-49f11e056993");
+INSERT INTO GD_GE
+	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360",
+	"45a2b80f-957b-4d44-89b8-cdbd6d69d33e",
+	"b811f7f4-27c4-486d-9f7c-beeeebb3fcf3",
+	108,
+	0,
+	'test_ipc::library::A::functions');
+INSERT INTO GD_SHP
+	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360");
+INSERT INTO GD_NCS
+	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"5c61bda7-0526-454a-9dd6-390d964b8360");
+INSERT INTO DIM_GE
+	VALUES (4920.000000,
+	3100.000000,
+	"5c61bda7-0526-454a-9dd6-390d964b8360",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360",
+	0,
+	"ad03b1db-fab7-48b2-b5b9-c96b399f5567");
 INSERT INTO DIM_DIA
 	VALUES ("45a2b80f-957b-4d44-89b8-cdbd6d69d33e",
 	'',
@@ -190,7 +214,10 @@ INSERT INTO SPR_PS
 	VALUES ("ba8d2e9f-4d42-4c7a-b6db-54ce70a27696",
 	'sgn1',
 	'',
-	'',
+	'LOG::LogInfo( message:"Executing sgn1" );
+LOG::LogInteger( message:param.int_param );
+LOG::LogReal( message:"real is: ", r:param.real_param );
+LOG::LogInfo( message:param.string_param );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -208,7 +235,9 @@ INSERT INTO SPR_PO
 	VALUES ("0587aaff-0ac6-42e2-912c-2e3f2da74d8c",
 	'op1',
 	'',
-	'',
+	'LOG::LogInfo( message:"Executing op1" );
+LOG::LogInfo( message:param.string_param );
+return 500;',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -226,7 +255,10 @@ INSERT INTO SPR_PO
 	VALUES ("87530abc-354d-4f62-ac02-ec58a9990d85",
 	'op2',
 	'',
-	'',
+	'LOG::LogInfo( message:"Executing op2" );
+param.string_by_ref = "parameter is: " + param.string_by_ref;
+param.int_by_ref = param.int_by_ref * param.int_by_ref;
+return "op2 return";',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -263,7 +295,7 @@ INSERT INTO SPR_PO
 	'op4',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("bd1b95af-7559-4843-bc3c-00cb70d37b33",
@@ -280,8 +312,11 @@ INSERT INTO SPR_PS
 	VALUES ("22a201d4-8763-4634-af3b-8e4f99232bc9",
 	'sgn2',
 	'',
-	'',
-	3,
+	'LOG::LogInfo( message:"Executing sgn2" );
+LOG::LogInteger( message:param.int_param );
+LOG::LogReal( message:"real is: ", r:param.real_param );
+LOG::LogInfo( message:param.string_param );',
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("a7b2baea-7847-48c6-84c2-9665f5c699af",
@@ -299,7 +334,7 @@ INSERT INTO SPR_PS
 	'sgn3',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("0f260ab1-8ee0-4ae7-85c3-0ccc5b96a8b8",
@@ -317,7 +352,7 @@ INSERT INTO SPR_PS
 	'sgn4',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("877c3eed-313c-475f-9797-19a4233019bb",

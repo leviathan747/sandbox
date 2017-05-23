@@ -268,7 +268,9 @@ INSERT INTO SPR_RO
 	VALUES ("2c3b95ef-64e9-4229-890c-0d12d24065cd",
 	'op3',
 	'',
-	'',
+	'LOG::LogInfo( message:"Executing op3" );
+param.ref = param.ref / 100;
+LOG::LogInfo( message:param.val );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -286,8 +288,8 @@ INSERT INTO SPR_RO
 	VALUES ("566b2307-1e4f-41db-8277-c073989a68a6",
 	'op4',
 	'',
-	'',
-	3,
+	'LOG::LogInfo( message:"Executing op4" );',
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("bd1b95af-7559-4843-bc3c-00cb70d37b33",
@@ -322,8 +324,11 @@ INSERT INTO SPR_RS
 	VALUES ("f1f88a31-4e88-4eff-888b-203ac5d9febb",
 	'sgn3',
 	'',
-	'',
-	3,
+	'LOG::LogInfo( message:"Executing sgn3" );
+LOG::LogInteger( message:param.int_param );
+LOG::LogReal( message:"real is: ", r:param.real_param );
+LOG::LogInfo( message:param.string_param );',
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("0f260ab1-8ee0-4ae7-85c3-0ccc5b96a8b8",
@@ -340,8 +345,11 @@ INSERT INTO SPR_RS
 	VALUES ("a9ccb4fe-8583-4be0-8188-715e6cc1ae4d",
 	'sgn4',
 	'',
-	'',
-	3,
+	'LOG::LogInfo( message:"Executing sgn4" );
+LOG::LogInteger( message:param.int_param );
+LOG::LogReal( message:"real is: ", r:param.real_param );
+LOG::LogInfo( message:param.string_param );',
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("877c3eed-313c-475f-9797-19a4233019bb",

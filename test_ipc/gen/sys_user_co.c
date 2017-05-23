@@ -45,6 +45,7 @@ UserInitializationCalloutf( void )
   /* Insert implementation specific code here.  */
   SYS_USER_CO_PRINTF( "UserInitializationCallout\n" )
   B_send_message();
+  A_send_message();
 }
 
 /*
