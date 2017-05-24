@@ -37,9 +37,28 @@
 i_t
 socket_SOCK_socket( i_t * p_error )
 {
+  // create the socket
   i_t ret_val = socket( PF_INET, SOCK_STREAM, IPPROTO_TCP );
-  *p_error = errno;
-  return ret_val;
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  i_t new_socket = ret_val;
+
+  // set the socket to non-blocking if it is set to blocking
+  ret_val = fcntl( new_socket, F_GETFL );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+  ret_val = fcntl( new_socket, F_SETFL, ret_val | O_NONBLOCK );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  return new_socket;
 }
 
 
@@ -84,27 +103,36 @@ socket_SOCK_listen( const i_t p_backlog, i_t * p_error, const i_t p_socket )
 
 
 /*
+ * Bridge:  sendhandshake
+ */
+i_t
+socket_SOCK_sendhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN], c_t p_self[ESCHER_SYS_MAX_STRING_LEN], const i_t p_socket )
+{
+  // build message
+  c_t message[ESCHER_SYS_MAX_STRING_LEN*2+1];
+  memcpy( message, p_self, strlen(p_self) );
+  message[strlen(p_self)] = ',';
+  memcpy( &message[strlen(p_self)+1], p_peer, strlen(p_peer) );
+  message[strlen(p_self)+strlen(p_peer)+1] = '\n';
+  message[strlen(p_self)+strlen(p_peer)+2] = '\0';
+
+  // send the message
+  i_t ret_val = send( p_socket, message, strlen(message), 0 );
+  *p_error = errno;
+  return ret_val;
+}
+
+
+/*
  * Bridge:  accept
  */
 i_t
 socket_SOCK_accept( i_t * p_error, c_t p_foreign_host[ESCHER_SYS_MAX_STRING_LEN], i_t * p_foreign_port, const i_t p_socket )
 {
-  // set the socket to non-blocking if it is set to blocking
-  i_t ret_val = fcntl( p_socket, F_GETFL );
-  if ( -1 == ret_val ) {
-    *p_error = errno;
-    return ret_val;
-  }
-  ret_val = fcntl( p_socket, F_SETFL, ret_val | O_NONBLOCK );
-  if ( -1 == ret_val ) {
-    *p_error = errno;
-    return ret_val;
-  }
-
   // accept connection
   struct sockaddr   foreign_address;
   socklen_t         foreign_len;
-  ret_val = accept( p_socket, &foreign_address, &foreign_len );
+  i_t ret_val = accept( p_socket, &foreign_address, &foreign_len );
   if ( -1 != ret_val ) {
     // get the foreign address
     struct sockaddr_in * foreign_in_address = (struct sockaddr_in *)&foreign_address;
@@ -126,23 +154,11 @@ socket_SOCK_accept( i_t * p_error, c_t p_foreign_host[ESCHER_SYS_MAX_STRING_LEN]
 i_t
 socket_SOCK_connect( i_t * p_error, c_t p_host[ESCHER_SYS_MAX_STRING_LEN], const i_t p_port, const i_t p_socket )
 {
-  // set the socket to non-blocking if it is set to blocking
-  i_t ret_val = fcntl( p_socket, F_GETFL );
-  if ( -1 == ret_val ) {
-    *p_error = errno;
-    return ret_val;
-  }
-  ret_val = fcntl( p_socket, F_SETFL, ret_val | O_NONBLOCK );
-  if ( -1 == ret_val ) {
-    *p_error = errno;
-    return ret_val;
-  }
-
   struct in_addr        host;
   struct sockaddr_in    address;
 
   // load host IP
-  ret_val = inet_pton( AF_INET, p_host, &host );
+  i_t ret_val = inet_pton( AF_INET, p_host, &host );
   if ( -1 == ret_val ) {
     *p_error = errno;
     return ret_val;
@@ -155,8 +171,26 @@ socket_SOCK_connect( i_t * p_error, c_t p_host[ESCHER_SYS_MAX_STRING_LEN], const
   address.sin_addr = host;
 
   ret_val = connect( p_socket, (struct sockaddr *)&address, sizeof(address) );
-  *p_error = errno;
-  return ret_val;
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  i_t new_socket = ret_val;
+
+  // set the new socket to non-blocking if it is set to blocking
+  ret_val = fcntl( new_socket, F_GETFL );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+  ret_val = fcntl( new_socket, F_SETFL, ret_val | O_NONBLOCK );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  return new_socket;
 }
 
 
@@ -205,5 +239,42 @@ socket_SOCK_checkconnected( i_t * p_error, const i_t p_socket )
     *p_error = EWOULDBLOCK;
     return -1;
   }
+}
+
+
+/*
+ * Bridge:  recvhandshake
+ */
+i_t
+socket_SOCK_recvhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN], c_t p_self[ESCHER_SYS_MAX_STRING_LEN], const i_t p_socket )
+{
+  // set buffer for message
+  c_t message[ESCHER_SYS_MAX_STRING_LEN*2+1];
+
+  // receive the message
+  i_t ret_val = recv( p_socket, message, ESCHER_SYS_MAX_STRING_LEN*2+1, 0 );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  // null terminate
+  message[ret_val] = '\0';
+
+  // find the delimiters
+  c_t * comma = strstr( message, "," );
+  c_t * newline = strstr( message, "\n" );
+  if ( !comma || !newline ) {
+    *p_error = 101; // corrupted data
+    return -1;
+  }
+
+  // copy the names into the return values
+  memcpy( p_peer, message, comma-message );
+  p_peer[comma-message] = '\0';
+  memcpy( p_self, comma+1, newline-(comma+1) );
+  p_self[newline-(comma+1)] = '\0';
+
+  return 0;
 }
 
