@@ -14,6 +14,7 @@
 #include "LOG_bridge.h"
 #include "STRING_bridge.h"
 #include "TRACE_bridge.h"
+#include "TIM_bridge.h"
 #include "socket_ERR_bridge.h"
 #include "socket_SOCK_bridge.h"
 #include "socket_SYS_bridge.h"
@@ -115,5 +116,17 @@ socket_SOCK_accept( i_t * p_error, c_t p_foreign_host[ESCHER_SYS_MAX_STRING_LEN]
   }
   *p_error = errno;
   return ret_val;
+}
+
+
+/*
+ * Bridge:  connect
+ */
+i_t
+socket_SOCK_connect( i_t * p_error, c_t p_host[ESCHER_SYS_MAX_STRING_LEN], const i_t p_port, const i_t p_socket )
+{
+  i_t result = 0;
+  /* Insert your implementation code here... */
+  return result;
 }
 
