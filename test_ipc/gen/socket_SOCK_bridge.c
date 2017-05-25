@@ -252,14 +252,21 @@ socket_SOCK_recvhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN],
   c_t message[ESCHER_SYS_MAX_STRING_LEN*2+1];
 
   // receive the message
-  i_t ret_val = recv( p_socket, message, ESCHER_SYS_MAX_STRING_LEN*2+1, 0 );
-  if ( -1 == ret_val ) {
-    *p_error = errno;
-    return ret_val;
-  }
+  i_t bytes_received = 0;
+  i_t ret_val = -1;
+  do {
+    ret_val = recv( p_socket, &message[bytes_received], ESCHER_SYS_MAX_STRING_LEN*2+1, 0 );
+    if ( -1 == ret_val ) {
+      *p_error = errno;
+      return ret_val;
+    }
+    bytes_received += ret_val;
+    // check if a newline has been received
+    if ( strstr( message, "\n" ) ) break;
+  } while ( ret_val > 0 && bytes_received < ESCHER_SYS_MAX_STRING_LEN*2+1 );
 
   // null terminate
-  message[ret_val] = '\0';
+  message[bytes_received] = '\0';
 
   // find the delimiters
   c_t * comma = strstr( message, "," );
