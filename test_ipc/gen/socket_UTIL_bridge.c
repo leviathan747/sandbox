@@ -36,3 +36,15 @@ socket_UTIL_datatostring( c_t A0xtumlsret[ESCHER_SYS_MAX_STRING_LEN], c_t p_data
   return A0xtumlsret;
 }
 
+
+/*
+ * Bridge:  print
+ */
+void
+socket_UTIL_print( c_t p_s[ESCHER_SYS_MAX_STRING_LEN] )
+{
+#ifdef DEBUG
+  fprintf( stderr, "%s\n", p_s );
+#endif
+}
+
