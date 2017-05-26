@@ -256,14 +256,16 @@ socket_SOCK_recvhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN],
   i_t ret_val = -1;
   do {
     ret_val = recv( p_socket, &message[bytes_received], ESCHER_SYS_MAX_STRING_LEN*2+1, 0 );
-    if ( -1 == ret_val ) {
+    if ( -1 == ret_val && EWOULDBLOCK != errno ) {
       *p_error = errno;
       return ret_val;
     }
+    else if ( 0 == ret_val ) {
+      *p_error = 103; // connection reset by peer
+      return -1;
+    }
     bytes_received += ret_val;
-    // check if a newline has been received
-    if ( strstr( message, "\n" ) ) break;
-  } while ( ret_val > 0 && bytes_received < ESCHER_SYS_MAX_STRING_LEN*2+1 );
+  } while ( ret_val > 0 && bytes_received < ESCHER_SYS_MAX_STRING_LEN*2+1 && EWOULDBLOCK != errno );
 
   // null terminate
   message[bytes_received] = '\0';
@@ -298,23 +300,32 @@ socket_SOCK_recvchunk( c_t p_data[ESCHER_SYS_MAX_STRING_LEN], i_t * p_error, i_t
     return ret_val;
   }
 
-  // set buffer for message
-  c_t message[*p_size];
+  if ( *p_size > 0 ) {
+    // set buffer for message
+    c_t message[*p_size];
 
-  // receive the message
-  i_t bytes_received = 0;
-  ret_val = -1;
-  do {
-    ret_val = recv( p_socket, &message[bytes_received], *p_size, 0 );
-    if ( -1 == ret_val ) {
-      *p_error = errno;
-      return ret_val;
-    }
-    bytes_received += ret_val;
-  } while ( ret_val > 0 && bytes_received < *p_size );
+    // receive the message
+    i_t bytes_received = 0;
+    ret_val = -1;
+    do {
+      ret_val = recv( p_socket, &message[bytes_received], *p_size, 0 );
+      if ( -1 == ret_val ) {
+        *p_error = errno;
+        return ret_val;
+      }
+      else if ( 0 == ret_val ) {
+        *p_error = 103; // connection reset by peer
+        return -1;
+      }
+      bytes_received += ret_val;
+    } while ( ret_val > 0 && bytes_received < *p_size );
 
-  // copy the names into the return values
-  memcpy( p_data, message, *p_size );
+    // copy the names into the return values
+    memcpy( p_data, message, *p_size );
+  }
+  else {
+    memset( p_data, 0, ESCHER_SYS_MAX_STRING_LEN );
+  }
 
   return 0;
 }
@@ -337,6 +348,10 @@ socket_SOCK_recvlength( i_t * p_error, i_t * p_len, const i_t p_socket )
     if ( -1 == ret_val ) {
       *p_error = errno;
       return ret_val;
+    }
+    else if ( 0 == ret_val ) {
+      *p_error = 103; // connection reset by peer
+      return -1;
     }
     bytes_received += ret_val;
   } while ( ret_val > 0 && bytes_received < sizeof(i_t) );
@@ -365,7 +380,7 @@ socket_SOCK_checkread( i_t * p_error, const i_t p_socket )
   timeout.tv_usec = 100000;
 
   // call select
-  i_t ret_val = select( p_socket+1, NULL, &readfds, NULL, &timeout );
+  i_t ret_val = select( p_socket+1, &readfds, NULL, NULL, &timeout );
   if ( -1 == ret_val ) {
     *p_error = errno;
     return ret_val;
@@ -418,13 +433,24 @@ socket_SOCK_sendlength( i_t * p_error, const i_t p_len, const i_t p_socket )
 i_t
 socket_SOCK_sendchunk( c_t p_data[ESCHER_SYS_MAX_STRING_LEN], i_t * p_error, const i_t p_size, const i_t p_socket )
 {
-  // build message
-  c_t message[p_size];
-  memcpy( message, p_data, p_size );
+  // send the size (reuse sendlength)
+  i_t ret_val = socket_SOCK_sendlength( p_error, p_size, p_socket );
+  if ( -1 == ret_val ) {
+    return ret_val;
+  }
 
-  // send the message
-  i_t ret_val = send( p_socket, message, p_size, 0 );
-  *p_error = errno;
+  if ( p_size > 0 ) {
+
+    // build message
+    c_t message[p_size];
+    memcpy( message, p_data, p_size );
+
+    // send the message
+    ret_val = send( p_socket, message, p_size, 0 );
+    *p_error = errno;
+
+  }
+
   return ret_val;
 }
 
