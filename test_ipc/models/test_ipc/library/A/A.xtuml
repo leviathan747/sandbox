@@ -217,7 +217,8 @@ INSERT INTO SPR_PS
 	'LOG::LogInfo( message:"Executing sgn1" );
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
-LOG::LogInfo( message:param.string_param );',
+LOG::LogInfo( message:param.string_param );
+send Bport::sgn3( int_param:param.int_param + 1, real_param:param.real_param * 2, string_param:"Courtney''s a babe" );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
