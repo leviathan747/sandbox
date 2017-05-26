@@ -124,31 +124,6 @@ socket_SOCK_sendhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN],
 
 
 /*
- * Bridge:  accept
- */
-i_t
-socket_SOCK_accept( i_t * p_error, c_t p_foreign_host[ESCHER_SYS_MAX_STRING_LEN], i_t * p_foreign_port, const i_t p_socket )
-{
-  // accept connection
-  struct sockaddr   foreign_address;
-  socklen_t         foreign_len;
-  i_t ret_val = accept( p_socket, &foreign_address, &foreign_len );
-  if ( -1 != ret_val ) {
-    // get the foreign address
-    struct sockaddr_in * foreign_in_address = (struct sockaddr_in *)&foreign_address;
-    const char * host = inet_ntop( AF_INET, &foreign_in_address->sin_addr, p_foreign_host, ESCHER_SYS_MAX_STRING_LEN );
-    if ( NULL == host ) {
-      *p_error = errno;
-      return -1;
-    }
-    *p_foreign_port = ntohs( foreign_in_address->sin_port );
-  }
-  *p_error = errno;
-  return ret_val;
-}
-
-
-/*
  * Bridge:  connect
  */
 i_t
@@ -217,7 +192,7 @@ socket_SOCK_checkconnected( i_t * p_error, const i_t p_socket )
     return ret_val;
   }
 
-  // check if the socket is readable and writable
+  // check if the socket is writable
   if ( FD_ISSET( p_socket, &writefds ) ) {
     // check if there was another error
     socklen_t ret_val_len = sizeof(i_t);
@@ -239,6 +214,31 @@ socket_SOCK_checkconnected( i_t * p_error, const i_t p_socket )
     *p_error = EWOULDBLOCK;
     return -1;
   }
+}
+
+
+/*
+ * Bridge:  accept
+ */
+i_t
+socket_SOCK_accept( i_t * p_error, c_t p_foreign_host[ESCHER_SYS_MAX_STRING_LEN], i_t * p_foreign_port, const i_t p_socket )
+{
+  // accept connection
+  struct sockaddr   foreign_address;
+  socklen_t         foreign_len;
+  i_t ret_val = accept( p_socket, &foreign_address, &foreign_len );
+  if ( -1 != ret_val ) {
+    // get the foreign address
+    struct sockaddr_in * foreign_in_address = (struct sockaddr_in *)&foreign_address;
+    const char * host = inet_ntop( AF_INET, &foreign_in_address->sin_addr, p_foreign_host, ESCHER_SYS_MAX_STRING_LEN );
+    if ( NULL == host ) {
+      *p_error = errno;
+      return -1;
+    }
+    *p_foreign_port = ntohs( foreign_in_address->sin_port );
+  }
+  *p_error = errno;
+  return ret_val;
 }
 
 
@@ -283,5 +283,148 @@ socket_SOCK_recvhandshake( i_t * p_error, c_t p_peer[ESCHER_SYS_MAX_STRING_LEN],
   p_self[newline-(comma+1)] = '\0';
 
   return 0;
+}
+
+
+/*
+ * Bridge:  recvchunk
+ */
+i_t
+socket_SOCK_recvchunk( c_t p_data[ESCHER_SYS_MAX_STRING_LEN], i_t * p_error, i_t * p_size, const i_t p_socket )
+{
+  // get the size (reuse recvlength)
+  i_t ret_val = socket_SOCK_recvlength( p_error, p_size, p_socket );
+  if ( -1 == ret_val ) {
+    return ret_val;
+  }
+
+  // set buffer for message
+  c_t message[*p_size];
+
+  // receive the message
+  i_t bytes_received = 0;
+  ret_val = -1;
+  do {
+    ret_val = recv( p_socket, &message[bytes_received], *p_size, 0 );
+    if ( -1 == ret_val ) {
+      *p_error = errno;
+      return ret_val;
+    }
+    bytes_received += ret_val;
+  } while ( ret_val > 0 && bytes_received < *p_size );
+
+  // copy the names into the return values
+  memcpy( p_data, message, *p_size );
+
+  return 0;
+}
+
+
+/*
+ * Bridge:  recvlength
+ */
+i_t
+socket_SOCK_recvlength( i_t * p_error, i_t * p_len, const i_t p_socket )
+{
+  // set buffer for message
+  c_t message[sizeof(i_t)];
+
+  // receive the message
+  i_t bytes_received = 0;
+  i_t ret_val = -1;
+  do {
+    ret_val = recv( p_socket, &message[bytes_received], sizeof(i_t), 0 );
+    if ( -1 == ret_val ) {
+      *p_error = errno;
+      return ret_val;
+    }
+    bytes_received += ret_val;
+  } while ( ret_val > 0 && bytes_received < sizeof(i_t) );
+
+  // copy into the return value
+  *p_len = *((i_t*)message);
+
+  return 0;
+}
+
+
+/*
+ * Bridge:  checkread
+ */
+i_t
+socket_SOCK_checkread( i_t * p_error, const i_t p_socket )
+{
+  // clear fd sets
+  fd_set readfds;
+  FD_ZERO( &readfds );
+  FD_SET( p_socket, &readfds );
+
+  // set timeout of 100ms (non-blocking)
+  struct timeval timeout;
+  memset( &timeout, 0, sizeof(struct timeval) );
+  timeout.tv_usec = 100000;
+
+  // call select
+  i_t ret_val = select( p_socket+1, NULL, &readfds, NULL, &timeout );
+  if ( -1 == ret_val ) {
+    *p_error = errno;
+    return ret_val;
+  }
+
+  // check if the socket is readable
+  if ( FD_ISSET( p_socket, &readfds ) ) {
+    // check if there was another error
+    socklen_t ret_val_len = sizeof(i_t);
+    i_t ret_val2 = getsockopt( p_socket, SOL_SOCKET, SO_ERROR, (void*)(&ret_val), &ret_val_len );
+    if ( -1 == ret_val2 ) {
+      *p_error = errno;
+      return ret_val2;
+    }
+    if ( 0 != ret_val ) {
+      *p_error = ret_val;
+      return -1;
+    }
+
+    // no errors, return successful connection
+    *p_error = 0;
+    return 0;
+  }
+  else {
+    *p_error = EWOULDBLOCK;
+    return -1;
+  }
+}
+
+
+/*
+ * Bridge:  sendlength
+ */
+i_t
+socket_SOCK_sendlength( i_t * p_error, const i_t p_len, const i_t p_socket )
+{
+  // build message
+  i_t message = p_len;
+
+  // send the message
+  i_t ret_val = send( p_socket, (void*)&message, sizeof(i_t), 0 );
+  *p_error = errno;
+  return ret_val;
+}
+
+
+/*
+ * Bridge:  sendchunk
+ */
+i_t
+socket_SOCK_sendchunk( c_t p_data[ESCHER_SYS_MAX_STRING_LEN], i_t * p_error, const i_t p_size, const i_t p_socket )
+{
+  // build message
+  c_t message[p_size];
+  memcpy( message, p_data, p_size );
+
+  // send the message
+  i_t ret_val = send( p_socket, message, p_size, 0 );
+  *p_error = errno;
+  return ret_val;
 }
 
