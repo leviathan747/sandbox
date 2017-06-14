@@ -307,7 +307,7 @@ INSERT INTO SPR_RS
 	'sgn2',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("a7b2baea-7847-48c6-84c2-9665f5c699af",
@@ -327,7 +327,8 @@ INSERT INTO SPR_RS
 	'LOG::LogInfo( message:"Executing sgn3" );
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
-LOG::LogInfo( message:param.string_param );',
+LOG::LogInfo( message:param.string_param );
+ARCH::shutdown();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY

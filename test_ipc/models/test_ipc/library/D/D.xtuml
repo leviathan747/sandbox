@@ -69,7 +69,7 @@ INSERT INTO GD_GE
 	"bbe932fb-a8df-468f-97b3-f278bae83c37",
 	94,
 	0,
-	'test_ipc::library::D::INTERFACE_PROVIDER::ChannelSpecification');
+	'test_ipc::library::D::PROV::ChannelSpecification');
 INSERT INTO GD_CON
 	VALUES ("d44d121f-ed16-4833-9565-6d8838da3bbb",
 	"00000000-0000-0000-0000-000000000000");
@@ -169,7 +169,7 @@ INSERT INTO GD_GE
 	"df222535-ec14-4447-a9fe-209381007c70",
 	94,
 	0,
-	'test_ipc::library::D::INTERFACE_REQUIRER::ChannelSpecification');
+	'test_ipc::library::D::REQ::ChannelSpecification');
 INSERT INTO GD_CON
 	VALUES ("cdd492e3-a1d4-464f-a7b6-69ad2bb95857",
 	"00000000-0000-0000-0000-000000000000");
@@ -273,7 +273,7 @@ INSERT INTO DIM_DIA
 INSERT INTO C_PO
 	VALUES ("b1fe1bcd-7470-4c4b-b0e1-565a2f192f41",
 	"888a08b3-10cf-48ea-9e56-f20dcf2f44c8",
-	'INTERFACE_PROVIDER',
+	'PROV',
 	0,
 	0);
 INSERT INTO C_IR
@@ -286,23 +286,23 @@ INSERT INTO C_P
 	'ChannelSpecification',
 	'Unnamed Interface',
 	'',
-	'D::INTERFACE_PROVIDER::ChannelSpecification');
+	'D::PROV::ChannelSpecification');
 INSERT INTO SPR_PEP
 	VALUES ("1b0b0226-2807-4e52-8e94-24cd6b9d9128",
 	"147e3841-4e59-414e-9035-cd2d888a405b",
 	"bbe932fb-a8df-468f-97b3-f278bae83c37");
 INSERT INTO SPR_PS
 	VALUES ("1b0b0226-2807-4e52-8e94-24cd6b9d9128",
-	'request_sgn',
+	'post_sgn',
 	'',
-	'send INTERFACE_REQUIRER::deliver_sgn(name:param.name, parameters:param.parameters, to:param.to, from:param.from );',
+	'send REQ::deliver_sgn(data:param.data, target:param.target, origin:param.origin );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("147e3841-4e59-414e-9035-cd2d888a405b",
 	"0cc28c47-437f-41d5-bca7-7e4a82a605df",
 	-1,
-	'request_sgn',
+	'post_sgn',
 	'',
 	'../../../../../mcshared/models/mcshared/channel/ChannelSpecification/ChannelSpecification.xtuml');
 INSERT INTO SPR_PEP
@@ -347,16 +347,16 @@ INSERT INTO SPR_PEP
 	"bbe932fb-a8df-468f-97b3-f278bae83c37");
 INSERT INTO SPR_PO
 	VALUES ("0c7ab483-4427-4b66-93b9-169c6d50edb3",
-	'request_op',
+	'post_op',
 	'',
-	'return INTERFACE_REQUIRER::deliver_op(name:param.name, parameters:param.parameters, to:param.to, from:param.from );',
+	'return REQ::deliver_op(data:param.data, target:param.target, origin:param.origin );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("5ba08c66-61b4-4f36-9c00-6c6d423b277c",
 	"0cc28c47-437f-41d5-bca7-7e4a82a605df",
 	-1,
-	'request_op',
+	'post_op',
 	'',
 	'../../../../../mcshared/models/mcshared/channel/ChannelSpecification/ChannelSpecification.xtuml');
 INSERT INTO SPR_PEP
@@ -386,7 +386,7 @@ INSERT INTO C_I_PROXY
 INSERT INTO C_PO
 	VALUES ("5f0f48e1-49d5-47f4-83dd-c15354b33533",
 	"888a08b3-10cf-48ea-9e56-f20dcf2f44c8",
-	'INTERFACE_REQUIRER',
+	'REQ',
 	0,
 	0);
 INSERT INTO C_IR
@@ -399,16 +399,16 @@ INSERT INTO C_P
 	'ChannelSpecification',
 	'Unnamed Interface',
 	'',
-	'D::INTERFACE_REQUIRER::ChannelSpecification');
+	'D::REQ::ChannelSpecification');
 INSERT INTO SPR_PEP
 	VALUES ("307a67e7-c534-479e-9d14-bdf5a6719e6d",
 	"147e3841-4e59-414e-9035-cd2d888a405b",
 	"df222535-ec14-4447-a9fe-209381007c70");
 INSERT INTO SPR_PS
 	VALUES ("307a67e7-c534-479e-9d14-bdf5a6719e6d",
-	'request_sgn',
+	'post_sgn',
 	'',
-	'send INTERFACE_PROVIDER::deliver_sgn(name:param.name, parameters:param.parameters, to:param.to, from:param.from );',
+	'send PROV::deliver_sgn(data:param.data, target:param.target, origin:param.origin );',
 	1,
 	0);
 INSERT INTO SPR_PEP
@@ -439,9 +439,9 @@ INSERT INTO SPR_PEP
 	"df222535-ec14-4447-a9fe-209381007c70");
 INSERT INTO SPR_PO
 	VALUES ("0ca6e2fa-8298-4c1f-82a5-2564a90154ba",
-	'request_op',
+	'post_op',
 	'',
-	'return INTERFACE_PROVIDER::deliver_op(name:param.name, parameters:param.parameters, to:param.to, from:param.from );',
+	'return PROV::deliver_op(data:param.data, target:param.target, origin:param.origin );',
 	1,
 	0);
 INSERT INTO SPR_PEP
