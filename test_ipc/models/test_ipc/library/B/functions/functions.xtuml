@@ -36,38 +36,15 @@ INSERT INTO DIM_DIA
 INSERT INTO S_SYNC
 	VALUES ("8475eee7-3faf-417f-8d12-9e0d84263a88",
 	"00000000-0000-0000-0000-000000000000",
-	'test',
+	'test1',
 	'',
-	'a = Aport::op1( string_param:"xtuml" );
-LOG::LogInteger( message:a );
-b = "param1";
-c = 25;
-d = Aport::op2( string_by_ref:b, int_by_ref:c );
-LOG::LogInfo( message:b );
-LOG::LogInteger( message:c );
-send Aport::sgn1( int_param:12345, real_param:3.14, string_param:"param2" );',
+	'generate test1_A1:start() to test1 assigner;',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
 	0);
 INSERT INTO PE_PE
 	VALUES ("8475eee7-3faf-417f-8d12-9e0d84263a88",
-	1,
-	"92e36797-5426-41c1-ab7f-5f6ff51bb0f1",
-	"00000000-0000-0000-0000-000000000000",
-	1);
-INSERT INTO S_SYNC
-	VALUES ("07c64a85-2f0a-4d96-b614-dc4563c0f027",
-	"00000000-0000-0000-0000-000000000000",
-	'simple_test',
-	'',
-	'send Aport::sgn2( int_param:1, real_param:3.14, string_param:"param3" );',
-	"ba5eda7a-def5-0000-0000-000000000000",
-	1,
-	'',
-	0);
-INSERT INTO PE_PE
-	VALUES ("07c64a85-2f0a-4d96-b614-dc4563c0f027",
 	1,
 	"92e36797-5426-41c1-ab7f-5f6ff51bb0f1",
 	"00000000-0000-0000-0000-000000000000",

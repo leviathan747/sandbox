@@ -1,8 +1,0 @@
-Executing sgn2
-1
-real is: 3.140000
-param3
-Executing sgn4
-900
-real is: 0.000000
-param_z
