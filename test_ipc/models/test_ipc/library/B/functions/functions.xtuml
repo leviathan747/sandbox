@@ -36,7 +36,7 @@ INSERT INTO DIM_DIA
 INSERT INTO S_SYNC
 	VALUES ("8475eee7-3faf-417f-8d12-9e0d84263a88",
 	"00000000-0000-0000-0000-000000000000",
-	'test1',
+	'run_test1',
 	'',
 	'generate test1_A1:start() to test1 assigner;',
 	"ba5eda7a-def5-0000-0000-000000000000",

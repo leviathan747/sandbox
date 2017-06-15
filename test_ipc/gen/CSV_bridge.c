@@ -11,12 +11,7 @@
 
 #include "test_ipc_sys_types.h"
 #include "CSV_bridge.h"
-#include "LOG_bridge.h"
-#include "TIM_bridge.h"
-#include "STRING_bridge.h"
 #include "TRACE_bridge.h"
-#include "CSV_bridge.h"
-#include "test_ipc_sys_types.h"
 
 #include <string.h>
 

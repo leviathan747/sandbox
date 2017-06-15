@@ -2,12 +2,12 @@ Executing op1
 xtuml
 500
 Executing op2
+parameter is: param1
+625
 Executing op3
 param_x
 8
 Executing op4
-parameter is: param1
-625
 Executing sgn1
 12345
 real is: 3.140000
