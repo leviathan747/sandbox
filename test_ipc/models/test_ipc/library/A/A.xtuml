@@ -158,30 +158,6 @@ INSERT INTO DIM_ED
 	VALUES ("ad1dab19-fca4-4f01-8a4f-19d7108aa2fa",
 	"00000000-0000-0000-0000-000000000000",
 	"ecf1efa1-77f0-4dd7-acd5-49f11e056993");
-INSERT INTO GD_GE
-	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360",
-	"45a2b80f-957b-4d44-89b8-cdbd6d69d33e",
-	"b811f7f4-27c4-486d-9f7c-beeeebb3fcf3",
-	108,
-	0,
-	'test_ipc::library::A::functions');
-INSERT INTO GD_SHP
-	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360");
-INSERT INTO GD_NCS
-	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360");
-INSERT INTO DIM_ND
-	VALUES (200.000000,
-	150.000000,
-	"5c61bda7-0526-454a-9dd6-390d964b8360");
-INSERT INTO DIM_GE
-	VALUES (4920.000000,
-	3100.000000,
-	"5c61bda7-0526-454a-9dd6-390d964b8360",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("5c61bda7-0526-454a-9dd6-390d964b8360",
-	0,
-	"ad03b1db-fab7-48b2-b5b9-c96b399f5567");
 INSERT INTO DIM_DIA
 	VALUES ("45a2b80f-957b-4d44-89b8-cdbd6d69d33e",
 	'',
@@ -218,7 +194,7 @@ INSERT INTO SPR_PS
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
 LOG::LogInfo( message:param.string_param );
-send Bport::sgn3( int_param:param.int_param + 1, real_param:param.real_param * 2, string_param:"Courtney''s a babe" );',
+send Bport::sgn3( int_param:48484, real_param:-1.2, string_param:"param_y" );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -257,6 +233,10 @@ INSERT INTO SPR_PO
 	'op2',
 	'',
 	'LOG::LogInfo( message:"Executing op2" );
+a = 800;
+Bport::op3( ref:a, val:"param_x" );
+LOG::LogInteger( message:a );
+Bport::op4();
 param.string_by_ref = "parameter is: " + param.string_by_ref;
 param.int_by_ref = param.int_by_ref * param.int_by_ref;
 return "op2 return";',
@@ -316,7 +296,8 @@ INSERT INTO SPR_PS
 	'LOG::LogInfo( message:"Executing sgn2" );
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
-LOG::LogInfo( message:param.string_param );',
+LOG::LogInfo( message:param.string_param );
+send Bport::sgn4( int_param:900, real_param:0, string_param:"param_z" );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY

@@ -36,7 +36,7 @@ INSERT INTO DIM_DIA
 INSERT INTO S_SYNC
 	VALUES ("8475eee7-3faf-417f-8d12-9e0d84263a88",
 	"00000000-0000-0000-0000-000000000000",
-	'send_message',
+	'test',
 	'',
 	'a = Aport::op1( string_param:"xtuml" );
 LOG::LogInteger( message:a );
@@ -45,8 +45,7 @@ c = 25;
 d = Aport::op2( string_by_ref:b, int_by_ref:c );
 LOG::LogInfo( message:b );
 LOG::LogInteger( message:c );
-send Aport::sgn1( int_param:12345, real_param:3.14, string_param:"param2" );
-send Aport::sgn2( int_param:54321, real_param:2.73, string_param:"param3" );',
+send Aport::sgn1( int_param:12345, real_param:3.14, string_param:"param2" );',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
@@ -62,7 +61,7 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'simple_test',
 	'',
-	'send Aport::sgn1( int_param:1, real_param:3.14, string_param:"param3" );',
+	'send Aport::sgn2( int_param:1, real_param:3.14, string_param:"param3" );',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',

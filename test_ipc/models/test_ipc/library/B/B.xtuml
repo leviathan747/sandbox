@@ -328,7 +328,7 @@ INSERT INTO SPR_RS
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
 LOG::LogInfo( message:param.string_param );
-ARCH::shutdown();',
+send Aport::sgn2( int_param:54321, real_param:2.73, string_param:"param3" );',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -349,7 +349,8 @@ INSERT INTO SPR_RS
 	'LOG::LogInfo( message:"Executing sgn4" );
 LOG::LogInteger( message:param.int_param );
 LOG::LogReal( message:"real is: ", r:param.real_param );
-LOG::LogInfo( message:param.string_param );',
+LOG::LogInfo( message:param.string_param );
+ARCH::shutdown();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
