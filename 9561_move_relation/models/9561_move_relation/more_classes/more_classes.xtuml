@@ -1,0 +1,70 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("2f216db3-d61c-4107-9169-31a74c249d3a",
+	"0de10480-d5ab-4c0e-9698-4dc9acf9c14a",
+	"0de10480-d5ab-4c0e-9698-4dc9acf9c14a",
+	'more_classes',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("80adb6c6-e794-4b25-8371-cc2acc1ad3cd",
+	112,
+	"2f216db3-d61c-4107-9169-31a74c249d3a",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'9561_move_relation::more_classes');
+INSERT INTO GD_GE
+	VALUES ("96df8bb7-2753-40c5-b3f9-c5bbfafe90a5",
+	"80adb6c6-e794-4b25-8371-cc2acc1ad3cd",
+	"9d7b969d-6ed7-4d6f-acda-e2a4d161f9b7",
+	21,
+	0,
+	'9561_move_relation::more_classes::D');
+INSERT INTO GD_SHP
+	VALUES ("96df8bb7-2753-40c5-b3f9-c5bbfafe90a5");
+INSERT INTO GD_NCS
+	VALUES ("96df8bb7-2753-40c5-b3f9-c5bbfafe90a5");
+INSERT INTO DIM_ND
+	VALUES (204.000000,
+	156.000000,
+	"96df8bb7-2753-40c5-b3f9-c5bbfafe90a5");
+INSERT INTO DIM_GE
+	VALUES (4368.000000,
+	3252.000000,
+	"96df8bb7-2753-40c5-b3f9-c5bbfafe90a5",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("96df8bb7-2753-40c5-b3f9-c5bbfafe90a5",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("80adb6c6-e794-4b25-8371-cc2acc1ad3cd",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("2f216db3-d61c-4107-9169-31a74c249d3a",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("0de10480-d5ab-4c0e-9698-4dc9acf9c14a",
+	'9561_move_relation',
+	1,
+	'../9561_move_relation.xtuml');
