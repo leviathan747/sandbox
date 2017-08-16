@@ -38,9 +38,15 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'foo',
 	'',
-	'//color = RED;
-color = YELLOW;
-level = levels::HIGH;',
+	'// fail1 = non_existent::FOO;
+// fail2 = math::E;
+// fail3 = levels::HIGH;
+// fail4 = primary_colors::PURPLE;
+// fail5 = primary_colors_of_light::PURPLE;
+success1a = primary_colors_of_light::RED;
+success1b = primary_colors::RED;
+success2 = directions::LEFT;
+success3 = days::WEEKDAY;',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',
