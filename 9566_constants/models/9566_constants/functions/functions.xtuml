@@ -43,6 +43,7 @@ INSERT INTO S_SYNC
 // fail3 = levels::HIGH;
 // fail4 = primary_colors::PURPLE;
 // fail5 = primary_colors_of_light::PURPLE;
+// fail6 = RED;
 success1a = primary_colors_of_light::RED;
 success1b = primary_colors::RED;
 success2 = directions::LEFT;
