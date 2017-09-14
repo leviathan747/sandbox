@@ -1,4 +1,4 @@
--- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.6
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
 
 INSERT INTO O_OBJ
 	VALUES ("4badd275-8325-4e31-9a84-02ee6714c85a",
@@ -9,6 +9,36 @@ INSERT INTO O_OBJ
 
 The beeper repeats four times on completion of the cooking period, signalling to the user that the oven door can be opened to inspect the readiness of the food inside.  ',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("ed7ab07b-2db2-4950-8424-5b6e777af52b",
+	"4badd275-8325-4e31-9a84-02ee6714c85a",
+	'some_operation',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	3,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_TPARM
+	VALUES ("34518098-0dbb-4c7a-8c37-beffb15fd8f1",
+	"ed7ab07b-2db2-4950-8424-5b6e777af52b",
+	'param1',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("5ac36731-9df7-42c9-aa10-3360794b837f",
+	"ed7ab07b-2db2-4950-8424-5b6e777af52b",
+	'param2',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"34518098-0dbb-4c7a-8c37-beffb15fd8f1",
+	'');
 INSERT INTO O_NBATTR
 	VALUES ("f1b68858-c581-46d8-80d3-0bf5af85611a",
 	"4badd275-8325-4e31-9a84-02ee6714c85a");
