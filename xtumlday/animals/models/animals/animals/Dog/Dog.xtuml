@@ -1,0 +1,124 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	'Dog',
+	1,
+	'Dog',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("f9eeb627-4602-4edf-b567-eb3dd4e0050c",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_BATTR
+	VALUES ("f9eeb627-4602-4edf-b567-eb3dd4e0050c",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_ATTR
+	VALUES ("f9eeb627-4602-4edf-b567-eb3dd4e0050c",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"00000000-0000-0000-0000-000000000000",
+	'name',
+	'',
+	'',
+	'name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("d3520611-8e09-4748-850f-31d879d89c34",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_BATTR
+	VALUES ("d3520611-8e09-4748-850f-31d879d89c34",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_ATTR
+	VALUES ("d3520611-8e09-4748-850f-31d879d89c34",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"f9eeb627-4602-4edf-b567-eb3dd4e0050c",
+	'breed',
+	'',
+	'',
+	'breed',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	0,
+	"45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"0325d457-90b5-4e4c-a9db-180d9c12c031",
+	"c065757b-c4a5-422c-af69-8eac4d6df084",
+	"1e92c962-601d-40dc-a0d7-9e8a9f97d96f",
+	"681de9ae-67bd-4d65-bfed-14f162086102",
+	"46dcdc87-db51-4729-8c07-6ca65f597ac3",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Home',
+	'address',
+	'R1.''lives in''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"0325d457-90b5-4e4c-a9db-180d9c12c031",
+	"c065757b-c4a5-422c-af69-8eac4d6df084",
+	'../animals.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	0,
+	"0325d457-90b5-4e4c-a9db-180d9c12c031",
+	"1e92c962-601d-40dc-a0d7-9e8a9f97d96f",
+	'../animals.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("681de9ae-67bd-4d65-bfed-14f162086102",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	1,
+	'address');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	'../Home/Home.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("681de9ae-67bd-4d65-bfed-14f162086102",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	"d3520611-8e09-4748-850f-31d879d89c34",
+	'address',
+	'',
+	'',
+	'address',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_OIDA
+	VALUES ("f9eeb627-4602-4edf-b567-eb3dd4e0050c",
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	0,
+	'name');
+INSERT INTO O_ID
+	VALUES (1,
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO O_ID
+	VALUES (2,
+	"20a365e9-d9ff-4ea0-b9e7-3225dfb6a764");
+INSERT INTO PE_PE
+	VALUES ("20a365e9-d9ff-4ea0-b9e7-3225dfb6a764",
+	1,
+	"967c3a1a-8f67-41ab-9a48-492a6b979f93",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("967c3a1a-8f67-41ab-9a48-492a6b979f93",
+	"cfe357ee-ac36-4d30-be05-0b8647c561a9",
+	"cfe357ee-ac36-4d30-be05-0b8647c561a9",
+	'animals',
+	'',
+	0,
+	'../animals.xtuml');

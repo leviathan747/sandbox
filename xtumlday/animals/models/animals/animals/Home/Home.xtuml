@@ -1,0 +1,55 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	'Home',
+	2,
+	'Home',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403");
+INSERT INTO O_BATTR
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403");
+INSERT INTO O_ATTR
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	"00000000-0000-0000-0000-000000000000",
+	'address',
+	'',
+	'',
+	'address',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403");
+INSERT INTO O_OIDA
+	VALUES ("45ed4cd8-aec1-43ad-8bf6-4715162f0f07",
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	0,
+	'address');
+INSERT INTO O_ID
+	VALUES (1,
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403");
+INSERT INTO O_ID
+	VALUES (2,
+	"deb4c0cb-efac-4dd5-a369-efc7d7377403");
+INSERT INTO PE_PE
+	VALUES ("deb4c0cb-efac-4dd5-a369-efc7d7377403",
+	1,
+	"967c3a1a-8f67-41ab-9a48-492a6b979f93",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("967c3a1a-8f67-41ab-9a48-492a6b979f93",
+	"cfe357ee-ac36-4d30-be05-0b8647c561a9",
+	"cfe357ee-ac36-4d30-be05-0b8647c561a9",
+	'animals',
+	'',
+	0,
+	'../animals.xtuml');
