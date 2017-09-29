@@ -1,0 +1,96 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("5bd60126-b678-494b-bca8-a81aeb3de512",
+	'Vegetable',
+	2,
+	'Vegetable',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("8021111f-e6c2-4c81-93cc-2f10c95a8b9f",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_BATTR
+	VALUES ("8021111f-e6c2-4c81-93cc-2f10c95a8b9f",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_ATTR
+	VALUES ("8021111f-e6c2-4c81-93cc-2f10c95a8b9f",
+	"5bd60126-b678-494b-bca8-a81aeb3de512",
+	"02395ddb-a0fa-41e7-90b3-291e2ed237f5",
+	'peelable',
+	'',
+	'',
+	'peelable',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("23c2ee70-8dbb-48ca-ad6f-f9f1c50ac43e",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_BATTR
+	VALUES ("23c2ee70-8dbb-48ca-ad6f-f9f1c50ac43e",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_ATTR
+	VALUES ("23c2ee70-8dbb-48ca-ad6f-f9f1c50ac43e",
+	"5bd60126-b678-494b-bca8-a81aeb3de512",
+	"00000000-0000-0000-0000-000000000000",
+	'genus',
+	'',
+	'',
+	'genus',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("02395ddb-a0fa-41e7-90b3-291e2ed237f5",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_BATTR
+	VALUES ("02395ddb-a0fa-41e7-90b3-291e2ed237f5",
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_ATTR
+	VALUES ("02395ddb-a0fa-41e7-90b3-291e2ed237f5",
+	"5bd60126-b678-494b-bca8-a81aeb3de512",
+	"23c2ee70-8dbb-48ca-ad6f-f9f1c50ac43e",
+	'species',
+	'',
+	'',
+	'species',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_OIDA
+	VALUES ("23c2ee70-8dbb-48ca-ad6f-f9f1c50ac43e",
+	"5bd60126-b678-494b-bca8-a81aeb3de512",
+	0,
+	'genus');
+INSERT INTO O_OIDA
+	VALUES ("02395ddb-a0fa-41e7-90b3-291e2ed237f5",
+	"5bd60126-b678-494b-bca8-a81aeb3de512",
+	0,
+	'species');
+INSERT INTO O_ID
+	VALUES (1,
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO O_ID
+	VALUES (2,
+	"5bd60126-b678-494b-bca8-a81aeb3de512");
+INSERT INTO PE_PE
+	VALUES ("5bd60126-b678-494b-bca8-a81aeb3de512",
+	1,
+	"bfc6df32-d75b-4c58-9ad0-6d50f2e5872c",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("bfc6df32-d75b-4c58-9ad0-6d50f2e5872c",
+	"35eeb998-4ce1-4181-8cd1-192ad39afa95",
+	"35eeb998-4ce1-4181-8cd1-192ad39afa95",
+	'food',
+	'',
+	0,
+	'../food.xtuml');

@@ -1,0 +1,50 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("3817b08b-59f7-4036-bd99-74bde166fed0",
+	'Tomato',
+	2,
+	'Tomato',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("2a1d7570-9541-4166-b78e-be083aaef9c8",
+	"3817b08b-59f7-4036-bd99-74bde166fed0");
+INSERT INTO O_BATTR
+	VALUES ("2a1d7570-9541-4166-b78e-be083aaef9c8",
+	"3817b08b-59f7-4036-bd99-74bde166fed0");
+INSERT INTO O_ATTR
+	VALUES ("2a1d7570-9541-4166-b78e-be083aaef9c8",
+	"3817b08b-59f7-4036-bd99-74bde166fed0",
+	"00000000-0000-0000-0000-000000000000",
+	'diameter',
+	'',
+	'',
+	'diameter',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"3817b08b-59f7-4036-bd99-74bde166fed0");
+INSERT INTO O_ID
+	VALUES (1,
+	"3817b08b-59f7-4036-bd99-74bde166fed0");
+INSERT INTO O_ID
+	VALUES (2,
+	"3817b08b-59f7-4036-bd99-74bde166fed0");
+INSERT INTO PE_PE
+	VALUES ("3817b08b-59f7-4036-bd99-74bde166fed0",
+	1,
+	"bfc6df32-d75b-4c58-9ad0-6d50f2e5872c",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("bfc6df32-d75b-4c58-9ad0-6d50f2e5872c",
+	"35eeb998-4ce1-4181-8cd1-192ad39afa95",
+	"35eeb998-4ce1-4181-8cd1-192ad39afa95",
+	'food',
+	'',
+	0,
+	'../food.xtuml');
