@@ -1,0 +1,81 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("0521c645-975d-4c98-99f9-9ed4dee5a9c7",
+	"00000000-0000-0000-0000-000000000000",
+	'OvenInterface',
+	'');
+INSERT INTO C_EP
+	VALUES ("b3975004-13ac-4289-8bdd-bce3779e209b",
+	"0521c645-975d-4c98-99f9-9ed4dee5a9c7",
+	-1,
+	'to_provider_sgn',
+	'');
+INSERT INTO C_AS
+	VALUES ("b3975004-13ac-4289-8bdd-bce3779e209b",
+	'to_provider_sgn',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("66f7f926-ecec-4d01-930c-276fb8442695",
+	"b3975004-13ac-4289-8bdd-bce3779e209b",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'string_param',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("67e63700-059a-4033-b928-27d735e8b808",
+	"b3975004-13ac-4289-8bdd-bce3779e209b",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'int_param',
+	'',
+	0,
+	'',
+	"66f7f926-ecec-4d01-930c-276fb8442695");
+INSERT INTO C_EP
+	VALUES ("be0816c3-131c-443e-bb5a-2e25daddff30",
+	"0521c645-975d-4c98-99f9-9ed4dee5a9c7",
+	-1,
+	'from_provider_sgn',
+	'');
+INSERT INTO C_AS
+	VALUES ("be0816c3-131c-443e-bb5a-2e25daddff30",
+	'from_provider_sgn',
+	'',
+	1,
+	"b3975004-13ac-4289-8bdd-bce3779e209b");
+INSERT INTO C_PP
+	VALUES ("fa8a618b-e370-4e1a-90ae-aff7d80e1801",
+	"be0816c3-131c-443e-bb5a-2e25daddff30",
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'boolean_param',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("3e9de3cb-d935-46a2-9217-786b4a51ab64",
+	"be0816c3-131c-443e-bb5a-2e25daddff30",
+	"ba5eda7a-def5-0000-0000-000000000010",
+	'timestamp_param',
+	'',
+	0,
+	'',
+	"fa8a618b-e370-4e1a-90ae-aff7d80e1801");
+INSERT INTO PE_PE
+	VALUES ("0521c645-975d-4c98-99f9-9ed4dee5a9c7",
+	1,
+	"b9c83de9-0a62-44b7-8682-7b8a9752c571",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("b9c83de9-0a62-44b7-8682-7b8a9752c571",
+	"9cd2cdcf-1f2b-42ce-bc35-718a90a05cab",
+	"9cd2cdcf-1f2b-42ce-bc35-718a90a05cab",
+	'components',
+	'',
+	0,
+	'../components.xtuml');
