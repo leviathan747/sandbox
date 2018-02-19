@@ -10,12 +10,11 @@
  *--------------------------------------------------------------------------*/
 
 #include "model_populate_test_sys_types.h"
-#include "FS_bridge.h"
 #include "Log_bridge.h"
-#include "PROC_bridge.h"
-#include "STR_bridge.h"
-#include "Log_bridge.h"
-#include "model_populate_test_sys_types.h"
+#include <stdio.h>
+
+model_populate_test_Log_Level_t Log_loglevel  = model_populate_test_Log_Level_Silent_e;
+FILE * Log_logfile                            = NULL;
 
 /*
  * Bridge:  Configure
@@ -23,7 +22,8 @@
 void
 Log_Configure( const i_t p_fd, const model_populate_test_Log_Level_t p_level )
 {
-  /* Replace/Insert your implementation code here... */
+  Log_loglevel = p_level;
+  Log_logfile = fdopen( p_fd, "a" );
 }
 
 
@@ -33,7 +33,10 @@ Log_Configure( const i_t p_fd, const model_populate_test_Log_Level_t p_level )
 void
 Log_Fatal( c_t p_msg[ESCHER_SYS_MAX_STRING_LEN] )
 {
-  /* Replace/Insert your implementation code here... */
+  if ( Log_loglevel <= model_populate_test_Log_Level_Fatal_e &&
+       Log_loglevel != model_populate_test_Log_Level_Silent_e ) {
+    if ( NULL != Log_logfile ) fprintf( Log_logfile, "FATAL: %s\n", p_msg );
+  }
 }
 
 
@@ -83,7 +86,10 @@ Log_Notice( c_t p_msg[ESCHER_SYS_MAX_STRING_LEN] )
 void
 Log_Info( c_t p_msg[ESCHER_SYS_MAX_STRING_LEN] )
 {
-  /* Replace/Insert your implementation code here... */
+  if ( Log_loglevel <= model_populate_test_Log_Level_Info_e &&
+       Log_loglevel != model_populate_test_Log_Level_Silent_e ) {
+    if ( NULL != Log_logfile ) fprintf( Log_logfile, "INFO: %s\n", p_msg );
+  }
 }
 
 

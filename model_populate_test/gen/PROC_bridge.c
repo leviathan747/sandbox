@@ -10,12 +10,9 @@
  *--------------------------------------------------------------------------*/
 
 #include "model_populate_test_sys_types.h"
-#include "FS_bridge.h"
+#include "PROC_bridge.h"
 #include "Log_bridge.h"
-#include "PROC_bridge.h"
-#include "STR_bridge.h"
-#include "PROC_bridge.h"
-#include "model_populate_test_sys_types.h"
+#include <stdlib.h>
 
 /*
  * Bridge:  Get_Env_Var
@@ -81,7 +78,10 @@ PROC_Set_Env_Var( c_t p_name[ESCHER_SYS_MAX_STRING_LEN], c_t p_value[ESCHER_SYS_
 void
 PROC_Assert( const bool p_cond, c_t p_msg[ESCHER_SYS_MAX_STRING_LEN] )
 {
-  /* Replace/Insert your implementation code here... */
+  if ( !p_cond ) {
+    Log_Fatal( p_msg );
+    exit( 1 );
+  }
 }
 
 

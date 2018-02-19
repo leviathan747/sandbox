@@ -11,11 +11,9 @@
 
 #include "model_populate_test_sys_types.h"
 #include "FS_bridge.h"
-#include "Log_bridge.h"
-#include "PROC_bridge.h"
-#include "STR_bridge.h"
-#include "FS_bridge.h"
-#include "model_populate_test_sys_types.h"
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
 
 /*
  * Bridge:  Open
@@ -23,9 +21,21 @@
 i_t
 FS_Open( c_t p_filename[ESCHER_SYS_MAX_STRING_LEN], const model_populate_test_File_Mode_t p_mode )
 {
-  i_t result = 0;
-  /* Insert your implementation code here... */
-  return result;
+  i_t mode = 0;
+  switch ( p_mode ) {
+    case ( model_populate_test_File_Mode_Read_e ):
+      mode |= O_RDONLY;
+      break;
+    case ( model_populate_test_File_Mode_Write_e ):
+      mode |= O_WRONLY | O_CREAT | O_TRUNC;
+      break;
+    case ( model_populate_test_File_Mode_Append_e ):
+      mode |= O_WRONLY | O_CREAT | O_APPEND;
+      break;
+    default:
+      break;
+  }
+  return open( p_filename, mode, 644 );
 }
 
 
@@ -35,9 +45,7 @@ FS_Open( c_t p_filename[ESCHER_SYS_MAX_STRING_LEN], const model_populate_test_Fi
 bool
 FS_Close( const i_t p_fd )
 {
-  bool result = false;
-  /* Insert your implementation code here... */
-  return result;
+  return ( 0 == close( p_fd ) );
 }
 
 
@@ -47,9 +55,10 @@ FS_Close( const i_t p_fd )
 c_t *
 FS_Read( c_t A0xtumlsret[ESCHER_SYS_MAX_STRING_LEN], const i_t p_fd, const i_t p_length )
 {
-  c_t * result = 0;
-  /* Insert your implementation code here... */
-  return result;
+  memset( A0xtumlsret, 0, ESCHER_SYS_MAX_STRING_LEN );
+  i_t nbytes = ( ( p_length < 0 ) || ( p_length > ESCHER_SYS_MAX_STRING_LEN ) ) ? ESCHER_SYS_MAX_STRING_LEN : p_length;
+  read( p_fd, A0xtumlsret, nbytes );
+  return A0xtumlsret;
 }
 
 

@@ -70,8 +70,9 @@ UserPreOoaInitializationCalloutf( void )
 void
 UserPostOoaInitializationCalloutf( void )
 {
-  /* Insert implementation specific code here.  */
-  SYS_USER_CO_PRINTF( "UserPostOoaInitializationCallout\n" )
+  SQL_Tokenization_Input_File( "../test_data/test_pop_schema.sql" );
+  SQL_Tokenization_Input_File( "../test_data/test_pop.sql" );
+  Domain1_print_domain();
 }
 
 /*
