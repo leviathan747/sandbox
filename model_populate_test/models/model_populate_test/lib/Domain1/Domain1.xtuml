@@ -262,7 +262,9 @@ INSERT INTO SPR_PS
 	VALUES ("d880adbf-f91f-4080-8ed5-50df862d8b7d",
 	'Instance',
 	'',
-	'MPOP::Instance( id:param.id, key_letter:param.key_letter );',
+	'Log::Info( msg:"Instance" );
+MPOP::Instance( id:param.id, key_letter:param.key_letter );
+::print_domain();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -298,7 +300,9 @@ INSERT INTO SPR_PS
 	VALUES ("22ae638b-4924-40de-a3d9-e8dd8cd6d80c",
 	'Integer',
 	'',
-	'MPOP::Integer( instance_id:param.instance_id, name:param.name, value:param.value );',
+	'Log::Info( msg:"Integer: " + STR::From_Integer( value:param.value ) );
+MPOP::Integer( instance_id:param.instance_id, name:param.name, value:param.value );
+::print_domain();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -316,7 +320,9 @@ INSERT INTO SPR_PS
 	VALUES ("e177abad-a5a7-42d5-a2c3-e765ce83fd33",
 	'Real',
 	'',
-	'MPOP::Real( instance_id:param.instance_id, name:param.name, value:param.value );',
+	'Log::Info( msg:"Real: " + STR::From_Real( value:param.value ) );
+MPOP::Real( instance_id:param.instance_id, name:param.name, value:param.value );
+::print_domain();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -352,7 +358,9 @@ INSERT INTO SPR_PS
 	VALUES ("72c0cb06-42a8-420d-9636-e749be5ddf93",
 	'String',
 	'',
-	'MPOP::String( instance_id:param.instance_id, name:param.name, value:param.value );',
+	'Log::Info( msg:"String: ''" + param.value + "''" );
+MPOP::String( instance_id:param.instance_id, name:param.name, value:param.value );
+::print_domain();',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
