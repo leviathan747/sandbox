@@ -1,0 +1,91 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("22f55263-b632-40da-9add-6e3d31730a24",
+	'Water Heater',
+	3,
+	'WaterHeater',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("16cf523e-9425-4e08-b1a8-1b270fe142e4",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_BATTR
+	VALUES ("16cf523e-9425-4e08-b1a8-1b270fe142e4",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_ATTR
+	VALUES ("16cf523e-9425-4e08-b1a8-1b270fe142e4",
+	"22f55263-b632-40da-9add-6e3d31730a24",
+	"136faf04-91c5-433b-bbba-3199c2ec01ef",
+	'temperature',
+	'',
+	'',
+	'temperature',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("002b4495-e50b-4967-97ff-deab78a0432d",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_BATTR
+	VALUES ("002b4495-e50b-4967-97ff-deab78a0432d",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_ATTR
+	VALUES ("002b4495-e50b-4967-97ff-deab78a0432d",
+	"22f55263-b632-40da-9add-6e3d31730a24",
+	"16cf523e-9425-4e08-b1a8-1b270fe142e4",
+	'water_level',
+	'',
+	'',
+	'water_level',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000003",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("136faf04-91c5-433b-bbba-3199c2ec01ef",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_BATTR
+	VALUES ("136faf04-91c5-433b-bbba-3199c2ec01ef",
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_ATTR
+	VALUES ("136faf04-91c5-433b-bbba-3199c2ec01ef",
+	"22f55263-b632-40da-9add-6e3d31730a24",
+	"00000000-0000-0000-0000-000000000000",
+	'heater_id',
+	'',
+	'',
+	'heater_id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_OIDA
+	VALUES ("136faf04-91c5-433b-bbba-3199c2ec01ef",
+	"22f55263-b632-40da-9add-6e3d31730a24",
+	0,
+	'heater_id');
+INSERT INTO O_ID
+	VALUES (1,
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO O_ID
+	VALUES (2,
+	"22f55263-b632-40da-9add-6e3d31730a24");
+INSERT INTO PE_PE
+	VALUES ("22f55263-b632-40da-9add-6e3d31730a24",
+	1,
+	"422882c6-ab83-437d-b268-07dfb9506345",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("422882c6-ab83-437d-b268-07dfb9506345",
+	"00000000-0000-0000-0000-000000000000",
+	"5a59ec51-d904-48b8-a8f5-072ed0792e3d",
+	'classes',
+	'',
+	0,
+	'../classes.xtuml');

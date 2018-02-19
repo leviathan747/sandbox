@@ -1,0 +1,96 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("ee4923a6-25a6-4e01-8223-ecb98fa4580d",
+	"00000000-0000-0000-0000-000000000000",
+	"5a59ec51-d904-48b8-a8f5-072ed0792e3d",
+	'functions',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("047c4cfb-4dcb-4f4d-bc7e-2b1b7c1f74f2",
+	112,
+	"ee4923a6-25a6-4e01-8223-ecb98fa4580d",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'model_populate_test::lib::Domain1::functions');
+INSERT INTO DIM_DIA
+	VALUES ("047c4cfb-4dcb-4f4d-bc7e-2b1b7c1f74f2",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("74051836-ff3f-442a-b416-17e09c3d8bbe",
+	"00000000-0000-0000-0000-000000000000",
+	'print_domain',
+	'',
+	'Log::Configure( fd:STDOUT, level: Log_Level::Info );
+
+select many water_heaters from instances of WaterHeater;
+for each water_heater in water_heaters
+  Log::Info( msg:"water_heater.heater_id: " + STR::From_Integer( value:water_heater.heater_id ) );
+  Log::Info( msg:"water_heater.temperature: " + STR::From_Real( value:water_heater.temperature ) );
+  Log::Info( msg:"water_heater.water_level: " + STR::From_Real( value:water_heater.water_level ) );
+  Log::Info( msg:"\n\n" );
+end for;
+
+select many filters from instances of Filter;
+for each filter in filters
+  Log::Info( msg:"filter.filter_id: " + STR::From_Integer( value:filter.filter_id ) );
+  Log::Info( msg:"filter.granularity: " + STR::From_Integer( value:filter.granularity ) );
+  Log::Info( msg:"filter.full: " + STR::From_Boolean( value:filter.full ) );
+  Log::Info( msg:"\n\n" );
+end for;
+
+select many pots from instances of Pot;
+for each pot in pots
+  Log::Info( msg:"pot.pot_id: " + STR::From_Integer( value:pot.pot_id ) );
+  Log::Info( msg:"pot.capacity: " + STR::From_Integer( value:pot.capacity ) );
+  Log::Info( msg:"pot.style: " + pot.style );
+end for;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("74051836-ff3f-442a-b416-17e09c3d8bbe",
+	1,
+	"ee4923a6-25a6-4e01-8223-ecb98fa4580d",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("ee4923a6-25a6-4e01-8223-ecb98fa4580d",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"afa5cb64-6628-4bd7-82db-5a56189307ff",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("afa5cb64-6628-4bd7-82db-5a56189307ff",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Domain1',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../Domain1.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("5a59ec51-d904-48b8-a8f5-072ed0792e3d",
+	'model_populate_test',
+	1,
+	'../../../model_populate_test.xtuml');
