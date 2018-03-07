@@ -1,0 +1,67 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("151f24f4-89b1-4c98-a63d-e87c465c9d88",
+	'Animal',
+	1,
+	'Animal',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("c80d7ae0-a0fc-4d65-858e-f61dfb2324dc",
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88",
+	'speak',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'LOG::LogInfo( message:self.name + ": I can talk!" );',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_NBATTR
+	VALUES ("5b26ecd4-4515-46d5-aadb-ca65c5209b6b",
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88");
+INSERT INTO O_BATTR
+	VALUES ("5b26ecd4-4515-46d5-aadb-ca65c5209b6b",
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88");
+INSERT INTO O_ATTR
+	VALUES ("5b26ecd4-4515-46d5-aadb-ca65c5209b6b",
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88",
+	"00000000-0000-0000-0000-000000000000",
+	'name',
+	'',
+	'',
+	'name',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88");
+INSERT INTO O_OIDA
+	VALUES ("5b26ecd4-4515-46d5-aadb-ca65c5209b6b",
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88",
+	0,
+	'name');
+INSERT INTO O_ID
+	VALUES (1,
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88");
+INSERT INTO O_ID
+	VALUES (2,
+	"151f24f4-89b1-4c98-a63d-e87c465c9d88");
+INSERT INTO PE_PE
+	VALUES ("151f24f4-89b1-4c98-a63d-e87c465c9d88",
+	1,
+	"375abe19-043f-4954-861b-0210238af941",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("375abe19-043f-4954-861b-0210238af941",
+	"00000000-0000-0000-0000-000000000000",
+	"6f3c359e-6b57-4c9c-b608-e8d8c1e023dd",
+	'classes',
+	'',
+	0,
+	'../classes.xtuml');

@@ -1,0 +1,104 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("7940b027-3f70-4ac7-a9a4-21fb7eea5418",
+	"00000000-0000-0000-0000-000000000000",
+	"6f3c359e-6b57-4c9c-b608-e8d8c1e023dd",
+	'functions',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("d0b0c3f3-2871-409d-a73a-35a385781e24",
+	112,
+	"7940b027-3f70-4ac7-a9a4-21fb7eea5418",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'deferred_operations::lib::deferred::functions');
+INSERT INTO DIM_DIA
+	VALUES ("d0b0c3f3-2871-409d-a73a-35a385781e24",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("0b4fe0a0-acd8-40d2-b0a6-0abc8707b117",
+	"00000000-0000-0000-0000-000000000000",
+	'run',
+	'',
+	'::populate();
+
+select many animals from instances of Animal;
+for each animal in animals
+  animal.speak();
+end for;
+
+ARCH::shutdown();',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("0b4fe0a0-acd8-40d2-b0a6-0abc8707b117",
+	1,
+	"7940b027-3f70-4ac7-a9a4-21fb7eea5418",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("ca2b681a-4ee3-4dcb-941c-99309562b1ca",
+	"00000000-0000-0000-0000-000000000000",
+	'populate',
+	'',
+	'create object instance animal1 of Animal;
+animal1.name = "Fido";
+create object instance dog of Dog;
+relate dog to animal1 across R1;
+
+create object instance animal2 of Animal;
+animal2.name = "Domino";
+create object instance cat of Cat;
+relate cat to animal2 across R1;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("ca2b681a-4ee3-4dcb-941c-99309562b1ca",
+	1,
+	"7940b027-3f70-4ac7-a9a4-21fb7eea5418",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("7940b027-3f70-4ac7-a9a4-21fb7eea5418",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"60427da0-43d0-4572-8eb4-6067c7583973",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("60427da0-43d0-4572-8eb4-6067c7583973",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'deferred',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../deferred.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("6f3c359e-6b57-4c9c-b608-e8d8c1e023dd",
+	'deferred_operations',
+	1,
+	'../../../deferred_operations.xtuml');
