@@ -22,12 +22,51 @@ INSERT INTO C_IO
 INSERT INTO C_PP
 	VALUES ("dc01b918-2eeb-4319-85a2-4bc3cf94e8ac",
 	"2f543202-31eb-4283-813e-196ce7851818",
-	"ba5eda7a-def5-0000-0000-000000000002",
+	"3e3ffe20-b10e-49c7-81ad-a5af89a7301c",
 	'int_param',
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("3e3ffe20-b10e-49c7-81ad-a5af89a7301c",
+	"00000000-0000-0000-0000-000000000000",
+	'my_int',
+	'',
+	'',
+	'../p.xtuml');
+INSERT INTO C_PP
+	VALUES ("04423229-38bd-43e4-a4b3-5682e1ef3937",
+	"2f543202-31eb-4283-813e-196ce7851818",
+	"9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	'struct_param',
+	'',
+	1,
+	'',
+	"dc01b918-2eeb-4319-85a2-4bc3cf94e8ac");
+INSERT INTO S_DT_PROXY
+	VALUES ("9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	"00000000-0000-0000-0000-000000000000",
+	'my_struct',
+	'',
+	'',
+	'../p.xtuml');
+INSERT INTO C_PP
+	VALUES ("50a8c37f-75de-4cd6-bde2-a3798fb91010",
+	"2f543202-31eb-4283-813e-196ce7851818",
+	"61c99255-8fe3-43d3-9131-dd6ffd00a0d8",
+	'enum_param',
 	'',
 	0,
 	'',
-	"00000000-0000-0000-0000-000000000000");
+	"04423229-38bd-43e4-a4b3-5682e1ef3937");
+INSERT INTO S_DT_PROXY
+	VALUES ("61c99255-8fe3-43d3-9131-dd6ffd00a0d8",
+	"00000000-0000-0000-0000-000000000000",
+	'my_enum',
+	'',
+	'',
+	'../p.xtuml');
 INSERT INTO PE_PE
 	VALUES ("24509970-025b-4a75-b2a6-a6252a02dcdb",
 	1,

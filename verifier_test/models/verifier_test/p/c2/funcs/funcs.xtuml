@@ -40,7 +40,13 @@ INSERT INTO S_SYNC
 	'',
 	'LOG::LogInfo( message:"Starting test..." );
 
-Port1::foo( int_param:5 );
+create object instance a of A;
+a.struct_attr.mem1 = 1;
+a.struct_attr.mem2 = 7;
+x = 5;
+Port1::foo( int_param:x, struct_param:a.struct_attr, enum_param: my_enum::TWO );
+LOG::LogInteger( message:a.struct_attr.mem1 );
+LOG::LogInteger( message:x );
 EE1::bar( string_param:"Hello, world!" );',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,

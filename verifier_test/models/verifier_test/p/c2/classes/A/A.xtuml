@@ -1,0 +1,57 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("64c5d5b2-a317-47e7-9f24-e7b46e5a03ab",
+	'A',
+	1,
+	'A',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("6c2a73c4-a9fe-4083-b6d9-4cc6bf2723da",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_BATTR
+	VALUES ("6c2a73c4-a9fe-4083-b6d9-4cc6bf2723da",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_ATTR
+	VALUES ("6c2a73c4-a9fe-4083-b6d9-4cc6bf2723da",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab",
+	"00000000-0000-0000-0000-000000000000",
+	'struct_attr',
+	'',
+	'',
+	'struct_attr',
+	0,
+	"9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	"00000000-0000-0000-0000-000000000000",
+	'my_struct',
+	'',
+	'',
+	'../../../p.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_ID
+	VALUES (1,
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_ID
+	VALUES (2,
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO PE_PE
+	VALUES ("64c5d5b2-a317-47e7-9f24-e7b46e5a03ab",
+	1,
+	"03c39fc3-51ff-4da8-9238-ab70ec209414",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("03c39fc3-51ff-4da8-9238-ab70ec209414",
+	"00000000-0000-0000-0000-000000000000",
+	"5a0e584d-2c69-40a4-86e7-9aa367457ec2",
+	'classes',
+	'',
+	0,
+	'../classes.xtuml');
