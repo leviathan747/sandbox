@@ -1,0 +1,44 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("24509970-025b-4a75-b2a6-a6252a02dcdb",
+	"00000000-0000-0000-0000-000000000000",
+	'i1',
+	'');
+INSERT INTO C_EP
+	VALUES ("2f543202-31eb-4283-813e-196ce7851818",
+	"24509970-025b-4a75-b2a6-a6252a02dcdb",
+	-1,
+	'foo',
+	'');
+INSERT INTO C_IO
+	VALUES ("2f543202-31eb-4283-813e-196ce7851818",
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'foo',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("dc01b918-2eeb-4319-85a2-4bc3cf94e8ac",
+	"2f543202-31eb-4283-813e-196ce7851818",
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'int_param',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("24509970-025b-4a75-b2a6-a6252a02dcdb",
+	1,
+	"7ab0cf7b-bdd9-4f11-9c3e-7edbc4f155c6",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("7ab0cf7b-bdd9-4f11-9c3e-7edbc4f155c6",
+	"5a0e584d-2c69-40a4-86e7-9aa367457ec2",
+	"5a0e584d-2c69-40a4-86e7-9aa367457ec2",
+	'p',
+	'',
+	0,
+	'../p.xtuml');

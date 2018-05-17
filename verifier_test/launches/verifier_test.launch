@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.xtuml.bp.debug.ui.BPApplication">
+<booleanAttribute key="org.xtuml.bp.debug.ui.BPApplication.activity" value="false"/>
+<booleanAttribute key="org.xtuml.bp.debug.ui.BPApplication.deterministic" value="true"/>
+<mapAttribute key="org.xtuml.bp.debug.ui.BPApplication.models">
+<mapEntry key="verifier_test" value="7ab0cf7b-bdd9-4f11-9c3e-7edbc4f155c6_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_ff07aa96-6f0e-4a75-ab82-92f61b4bdb35_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_07d33c9c-7044-44a1-b7ec-4f93cbd34b4c_INTERNALTOKEN_1_INTERNALTOKEN_None_INTERNALTOKEN_enabled_TOKEN_"/>
+</mapAttribute>
+<booleanAttribute key="org.xtuml.bp.debug.ui.BPApplication.simtime" value="true"/>
+<intAttribute key="org.xtuml.bp.debug.ui.BPApplication.timeout" value="0"/>
+</launchConfiguration>

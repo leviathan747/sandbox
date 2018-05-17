@@ -1,0 +1,76 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("df64fc25-fda0-4d6f-8a0f-0036f1b40c06",
+	"00000000-0000-0000-0000-000000000000",
+	"5a0e584d-2c69-40a4-86e7-9aa367457ec2",
+	'funcs',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("3fcbe751-7091-45da-b0ac-121616bcf036",
+	112,
+	"df64fc25-fda0-4d6f-8a0f-0036f1b40c06",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'verifier_test::p::c2::funcs');
+INSERT INTO DIM_DIA
+	VALUES ("3fcbe751-7091-45da-b0ac-121616bcf036",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("63792dc7-9c2b-4956-a5b5-b17b1f0e18e4",
+	"00000000-0000-0000-0000-000000000000",
+	'test',
+	'',
+	'LOG::LogInfo( message:"Starting test..." );
+
+Port1::foo( int_param:5 );
+EE1::bar( string_param:"Hello, world!" );',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("63792dc7-9c2b-4956-a5b5-b17b1f0e18e4",
+	1,
+	"df64fc25-fda0-4d6f-8a0f-0036f1b40c06",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("df64fc25-fda0-4d6f-8a0f-0036f1b40c06",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"ff07aa96-6f0e-4a75-ab82-92f61b4bdb35",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("ff07aa96-6f0e-4a75-ab82-92f61b4bdb35",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'c2',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../c2.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("5a0e584d-2c69-40a4-86e7-9aa367457ec2",
+	'verifier_test',
+	1,
+	'../../../verifier_test.xtuml');
