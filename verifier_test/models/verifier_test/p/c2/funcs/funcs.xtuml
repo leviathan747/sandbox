@@ -44,10 +44,13 @@ create object instance a of A;
 a.struct_attr.mem1 = 1;
 a.struct_attr.mem2 = 7;
 x = 5;
-Port1::foo( int_param:x, struct_param:a.struct_attr, enum_param: my_enum::TWO );
+Port1::foo( int_param:x, struct_param:a.struct_attr, enum_param: my_udt_enum::TWO );
 LOG::LogInteger( message:a.struct_attr.mem1 );
 LOG::LogInteger( message:x );
-EE1::bar( string_param:"Hello, world!" );',
+mp = EE1::get_mapping();
+EE1::bar( string_param:"Hello, world!", mapping_param:mp );
+mp2 = Port1::get_mapping2();
+EE1::bar( string_param:"Hello, world!", mapping_param:mp2 );',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
 	'',

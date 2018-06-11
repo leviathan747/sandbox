@@ -38,32 +38,53 @@ INSERT INTO S_DT_PROXY
 INSERT INTO C_PP
 	VALUES ("04423229-38bd-43e4-a4b3-5682e1ef3937",
 	"2f543202-31eb-4283-813e-196ce7851818",
-	"9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	"becbae55-679f-414d-97bc-0b665fbd8bf4",
 	'struct_param',
 	'',
 	1,
 	'',
 	"dc01b918-2eeb-4319-85a2-4bc3cf94e8ac");
 INSERT INTO S_DT_PROXY
-	VALUES ("9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	VALUES ("becbae55-679f-414d-97bc-0b665fbd8bf4",
 	"00000000-0000-0000-0000-000000000000",
-	'my_struct',
+	'my_udt_struct',
 	'',
 	'',
 	'../p.xtuml');
 INSERT INTO C_PP
 	VALUES ("50a8c37f-75de-4cd6-bde2-a3798fb91010",
 	"2f543202-31eb-4283-813e-196ce7851818",
-	"61c99255-8fe3-43d3-9131-dd6ffd00a0d8",
+	"bf274973-9dc1-496c-884c-ef1f76e1fa2f",
 	'enum_param',
 	'',
 	0,
 	'',
 	"04423229-38bd-43e4-a4b3-5682e1ef3937");
 INSERT INTO S_DT_PROXY
-	VALUES ("61c99255-8fe3-43d3-9131-dd6ffd00a0d8",
+	VALUES ("bf274973-9dc1-496c-884c-ef1f76e1fa2f",
 	"00000000-0000-0000-0000-000000000000",
-	'my_enum',
+	'my_udt_enum',
+	'',
+	'',
+	'../p.xtuml');
+INSERT INTO C_EP
+	VALUES ("14946e5a-eb44-4c5f-ac54-32a95f8a48df",
+	"24509970-025b-4a75-b2a6-a6252a02dcdb",
+	-1,
+	'get_mapping2',
+	'');
+INSERT INTO C_IO
+	VALUES ("14946e5a-eb44-4c5f-ac54-32a95f8a48df",
+	"ff44579d-bbe7-43b2-9fd7-403c71724b13",
+	'get_mapping2',
+	'',
+	0,
+	'',
+	"2f543202-31eb-4283-813e-196ce7851818");
+INSERT INTO S_DT_PROXY
+	VALUES ("ff44579d-bbe7-43b2-9fd7-403c71724b13",
+	"00000000-0000-0000-0000-000000000000",
+	'my_mapping',
 	'',
 	'',
 	'../p.xtuml');

@@ -4,6 +4,8 @@ import org.xtuml.bp.core.ComponentInstance_c;
 import org.xtuml.bp.core.CorePlugin;
 
 import lib.BPInteger;
+import lib.InstMapping;
+import lib.Matrix;
 
 public class c1 implements Ii1ToProvider {
     
@@ -21,5 +23,10 @@ public class c1 implements Ii1ToProvider {
     	    struct_param.setmem1( 9 );
         CorePlugin.out.println( "Inside realized 'foo'." );
     }
+
+	@Override
+	public InstMapping get_mapping2( ComponentInstance_c senderReceiver ) {
+		return new Matrix( "Courtney" );
+	}
 
 }

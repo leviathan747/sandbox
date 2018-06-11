@@ -22,13 +22,38 @@ INSERT INTO O_ATTR
 	'',
 	'struct_attr',
 	0,
-	"9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	"becbae55-679f-414d-97bc-0b665fbd8bf4",
 	'',
 	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("9b6701f2-1e4b-43f3-9ab6-1a88df218bea",
+	VALUES ("becbae55-679f-414d-97bc-0b665fbd8bf4",
 	"00000000-0000-0000-0000-000000000000",
-	'my_struct',
+	'my_udt_struct',
+	'',
+	'',
+	'../../../p.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("19b3be4c-b4a4-45cc-a4b8-5259f5d6d81d",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_BATTR
+	VALUES ("19b3be4c-b4a4-45cc-a4b8-5259f5d6d81d",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab");
+INSERT INTO O_ATTR
+	VALUES ("19b3be4c-b4a4-45cc-a4b8-5259f5d6d81d",
+	"64c5d5b2-a317-47e7-9f24-e7b46e5a03ab",
+	"6c2a73c4-a9fe-4083-b6d9-4cc6bf2723da",
+	'mapping_attr',
+	'',
+	'',
+	'mapping_attr',
+	0,
+	"ff44579d-bbe7-43b2-9fd7-403c71724b13",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("ff44579d-bbe7-43b2-9fd7-403c71724b13",
+	"00000000-0000-0000-0000-000000000000",
+	'my_mapping',
 	'',
 	'',
 	'../../../p.xtuml');

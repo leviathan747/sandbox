@@ -248,6 +248,24 @@ INSERT INTO C_EP_PROXY
 	'foo',
 	'',
 	'../i1/i1.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("05f21663-233d-4e97-874d-67431df8c7fd",
+	"14946e5a-eb44-4c5f-ac54-32a95f8a48df",
+	"5a5eed65-95e9-4e9d-be4f-f849b9019489");
+INSERT INTO SPR_RO
+	VALUES ("05f21663-233d-4e97-874d-67431df8c7fd",
+	'get_mapping2',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("14946e5a-eb44-4c5f-ac54-32a95f8a48df",
+	"24509970-025b-4a75-b2a6-a6252a02dcdb",
+	-1,
+	'get_mapping2',
+	'',
+	'../i1/i1.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("24509970-025b-4a75-b2a6-a6252a02dcdb",
 	"00000000-0000-0000-0000-000000000000",
