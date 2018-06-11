@@ -1,0 +1,94 @@
+//! ACTIVITY BEGIN. '028eaa7f-5f64-4bc0-b071-d6cc86ab9187' DO NOT EDIT THIS LINE.
+public service ALU::key ( code : in integer ) is
+begin
+  if ( 0 <= code and code <= 15 ) then
+    // Create the calculator instance population on the first call
+    if ( null = find_one Calculator() ) then
+      ( create unique Calculator() ).init();
+    end if;
+    // generate the key press to the display
+    generate Display.keypress( code ) to ( find_one Calculator() )->R1.Display;
+  end if;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'd9289c84-f95c-4001-9c45-c1f13ec3ff35' DO NOT EDIT THIS LINE.
+public service ALU::clear () is
+begin
+  // Create the calculator instance population on the first call
+  if ( null = find_one Calculator() ) then
+    ( create unique Calculator() ).init();
+  end if;
+  // clear the memory
+  ( find_one Memory() ).reset();
+  // set the calculator to no-op
+  ( find_one Calculator() ).current_op := -1;
+  // reset the display
+  generate Display.reset() to find_one Display();
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '4b56af13-3339-4377-9340-2c8b8ac24a7b' DO NOT EDIT THIS LINE.
+private service ALU::testcase1 () is
+begin
+  console << "Running 'testcase1': 1 + 2 =" << endl;
+  clear();
+  // 1 + 2 =
+  key( 1 );
+  key( 10 );
+  key( 2 );
+  key( 14 );
+  // 3.0
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '82ac9a46-802e-400d-ad5d-d8cddcaefb85' DO NOT EDIT THIS LINE.
+private service ALU::testcase2 () is
+begin
+  console << "Running 'testcase2': 1 + 2 + 3 =" << endl;
+  clear();
+  // 1 + 2 + 3 =
+  key( 1 );
+  key( 10 );
+  key( 2 );
+  key( 10 );
+  // 3.0
+  key( 3 );
+  key( 14 );
+// 6.0
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'd160eb7c-b90f-42cd-a6a8-830256ebe5f1' DO NOT EDIT THIS LINE.
+private service ALU::testcase3 () is
+begin
+  console << "Running 'testcase3': 7.5 - 4.3 =" << endl;
+  clear();
+  // 7.5 - 4.3 =
+  key( 7 );
+  key( 15 );
+  key( 5 );
+  key( 11 );
+  key( 4 );
+  key( 15 );
+  key( 3 );
+  key( 14 );
+  // 3.2
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'e0eb3e62-5059-44cd-b6d6-1ae79626ebfd' DO NOT EDIT THIS LINE.
+private service ALU::testcase4 () is
+begin
+  console << "Running 'testcase4': 12 * 3 =" << endl;
+  clear();
+  // 12 * 3 =
+  key( 1 );
+  key( 2 );
+  key( 12 );
+  key( 3 );
+  key( 14 );
+  // 36.0
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

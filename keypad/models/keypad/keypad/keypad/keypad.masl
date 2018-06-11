@@ -1,0 +1,14 @@
+//! ACTIVITY BEGIN. '4dc5e9d1-632d-43fe-b69b-1b371232d152' DO NOT EDIT THIS LINE.
+public service keypad::keyIO~>key ( code : in integer ) is
+begin
+  console << "Sending message 'key' on keyIO. code: " << code << endl;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '194de42f-08e6-4192-8cf9-03fc0bc805ba' DO NOT EDIT THIS LINE.
+public service keypad::keyIO~>clear () is
+begin
+  console << "Sending message 'clear' on keyIO." << endl;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

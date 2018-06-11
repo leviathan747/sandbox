@@ -1,0 +1,14 @@
+//! ACTIVITY BEGIN. '9504419b-9a6a-40fc-9f64-67556e3a333e' DO NOT EDIT THIS LINE.
+public service ALU::disp~>result ( value : in real ) is
+begin
+  console << "Sending message 'result' on disp. value: " << value << endl;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '9d59f71b-a5df-4d55-b884-d9ed31391d41' DO NOT EDIT THIS LINE.
+public service ALU::disp~>error ( message : in string ) is
+begin
+  console << "Sending message 'error' on disp. message: " << message << endl;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

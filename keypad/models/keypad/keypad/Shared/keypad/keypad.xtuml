@@ -1,0 +1,88 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("e1fa55ff-5b37-42d9-bb75-61ea4e75c29e",
+	"00000000-0000-0000-0000-000000000000",
+	'keypad',
+	'');
+INSERT INTO C_EP
+	VALUES ("6300c725-9482-4214-81d8-ea67461ea4ef",
+	"e1fa55ff-5b37-42d9-bb75-61ea4e75c29e",
+	0,
+	'error',
+	'');
+INSERT INTO C_IO
+	VALUES ("6300c725-9482-4214-81d8-ea67461ea4ef",
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	'error',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_PP
+	VALUES ("b9d99ee4-41f4-4732-8117-f03defcc9dd6",
+	"6300c725-9482-4214-81d8-ea67461ea4ef",
+	"befacd1c-7a90-42ee-bb17-cf934d0d6714",
+	'message',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("befacd1c-7a90-42ee-bb17-cf934d0d6714",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_EP
+	VALUES ("99c640b6-df87-42b0-9878-ba023b7a079d",
+	"e1fa55ff-5b37-42d9-bb75-61ea4e75c29e",
+	0,
+	'result',
+	'');
+INSERT INTO C_IO
+	VALUES ("99c640b6-df87-42b0-9878-ba023b7a079d",
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	'result',
+	'',
+	0,
+	'',
+	"6300c725-9482-4214-81d8-ea67461ea4ef");
+INSERT INTO C_PP
+	VALUES ("95dfd23a-b433-4800-82f1-0b7c9ca070e1",
+	"99c640b6-df87-42b0-9878-ba023b7a079d",
+	"59a739c7-938b-42bf-a652-f75ab9eb3f54",
+	'value',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("59a739c7-938b-42bf-a652-f75ab9eb3f54",
+	"00000000-0000-0000-0000-000000000000",
+	'real',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO PE_PE
+	VALUES ("e1fa55ff-5b37-42d9-bb75-61ea4e75c29e",
+	1,
+	"634d9e79-f034-4822-ab9b-c855ea9d5ab1",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("634d9e79-f034-4822-ab9b-c855ea9d5ab1",
+	"00000000-0000-0000-0000-000000000000",
+	"bdf1ae1d-6981-44e0-a369-266a88242516",
+	'Shared',
+	'',
+	0,
+	'../Shared.xtuml');

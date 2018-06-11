@@ -1,0 +1,54 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("f75009cf-c83f-4a63-ae00-654d6401dc8a",
+	"00000000-0000-0000-0000-000000000000",
+	"e53d9501-5c4e-481f-a2f5-904085532440",
+	'Shared',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("5b485420-356c-4faf-850c-17d86021e4cc",
+	112,
+	"f75009cf-c83f-4a63-ae00-654d6401dc8a",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'calculator::calculator::Shared');
+INSERT INTO DIM_DIA
+	VALUES ("5b485420-356c-4faf-850c-17d86021e4cc",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("f75009cf-c83f-4a63-ae00-654d6401dc8a",
+	1,
+	"8f2096c0-abbb-4c13-9e95-80624c548cbe",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("8f2096c0-abbb-4c13-9e95-80624c548cbe",
+	"e53d9501-5c4e-481f-a2f5-904085532440",
+	"e53d9501-5c4e-481f-a2f5-904085532440",
+	'calculator',
+	'masl_project',
+	0,
+	'../calculator.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("e53d9501-5c4e-481f-a2f5-904085532440",
+	'calculator',
+	1,
+	'../../calculator.xtuml');

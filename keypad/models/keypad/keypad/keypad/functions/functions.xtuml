@@ -1,0 +1,195 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	"bdf1ae1d-6981-44e0-a369-266a88242516",
+	'functions',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("411d5407-9ff5-4dbb-9ac6-7d1539099efb",
+	112,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'keypad::keypad::keypad::functions');
+INSERT INTO DIM_DIA
+	VALUES ("411d5407-9ff5-4dbb-9ac6-7d1539099efb",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("616369be-3289-4362-835a-fd985ff8ccd9",
+	"00000000-0000-0000-0000-000000000000",
+	'error',
+	'Display an error in the Java UI.
+
+This function is realized in C++
+',
+	'',
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	3,
+	'',
+	4);
+INSERT INTO S_SPARM
+	VALUES ("ffccfef9-5b9f-4ffd-8cfe-e8872c2a79e4",
+	"616369be-3289-4362-835a-fd985ff8ccd9",
+	'message',
+	"befacd1c-7a90-42ee-bb17-cf934d0d6714",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("befacd1c-7a90-42ee-bb17-cf934d0d6714",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO PE_PE
+	VALUES ("616369be-3289-4362-835a-fd985ff8ccd9",
+	1,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_DT_PROXY
+	VALUES ("d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO S_SYNC
+	VALUES ("210b5610-6544-4a75-9d75-a8543ecc50d7",
+	"00000000-0000-0000-0000-000000000000",
+	'result',
+	'Display a result in the Java UI.
+
+This function is realized in C++
+',
+	'',
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	3,
+	'',
+	4);
+INSERT INTO S_SPARM
+	VALUES ("ddb9d7a1-fd9c-4dc0-8614-87ea2aa29c6f",
+	"210b5610-6544-4a75-9d75-a8543ecc50d7",
+	'value',
+	"59a739c7-938b-42bf-a652-f75ab9eb3f54",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("59a739c7-938b-42bf-a652-f75ab9eb3f54",
+	"00000000-0000-0000-0000-000000000000",
+	'real',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO PE_PE
+	VALUES ("210b5610-6544-4a75-9d75-a8543ecc50d7",
+	1,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("13588895-4bf4-40a3-8cef-d24b41aafe9d",
+	"00000000-0000-0000-0000-000000000000",
+	'connect',
+	'Connect to the Java UI.
+
+This function is realized in C++
+',
+	'',
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	3,
+	'',
+	4);
+INSERT INTO PE_PE
+	VALUES ("13588895-4bf4-40a3-8cef-d24b41aafe9d",
+	1,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("0319713f-99f8-47df-ba20-95e6645d1249",
+	"00000000-0000-0000-0000-000000000000",
+	'init',
+	'',
+	'',
+	"d024d8a2-32ca-4608-98cd-88cfa6a397f0",
+	3,
+	'',
+	1);
+INSERT INTO PE_PE
+	VALUES ("0319713f-99f8-47df-ba20-95e6645d1249",
+	1,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("e76c0d48-7865-4ec1-b238-cd49a78eb845",
+	"00000000-0000-0000-0000-000000000000",
+	'getPendingEvent',
+	'Poll the Java UI for a button press event.
+
+This function is realized in C++
+',
+	'',
+	"5480a8b8-8d75-4226-ae78-2a311619f57f",
+	3,
+	'',
+	4);
+INSERT INTO PE_PE
+	VALUES ("e76c0d48-7865-4ec1-b238-cd49a78eb845",
+	1,
+	"b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_DT_PROXY
+	VALUES ("5480a8b8-8d75-4226-ae78-2a311619f57f",
+	"00000000-0000-0000-0000-000000000000",
+	'calcevent',
+	'',
+	'',
+	'../types/types.xtuml');
+INSERT INTO PE_PE
+	VALUES ("b9fb524a-36f6-4dd4-9eb9-5485dfae2a1a",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"2ca45b8e-8060-4069-aec2-cb804d95b031",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("2ca45b8e-8060-4069-aec2-cb804d95b031",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'keypad',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../keypad.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("bdf1ae1d-6981-44e0-a369-266a88242516",
+	'keypad',
+	1,
+	'../../../keypad.xtuml');

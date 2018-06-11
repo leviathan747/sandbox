@@ -1,0 +1,28 @@
+//! ACTIVITY BEGIN. '01412950-5cd0-4045-984a-a1dbf2bff895' DO NOT EDIT THIS LINE.
+public service keypad::keyIO~>key ( code : in integer ) is
+begin
+  ALU::key( code );
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '992bffc8-0cf9-46f4-a1a3-2917f5daad7f' DO NOT EDIT THIS LINE.
+public service keypad::keyIO~>clear () is
+begin
+  ALU::clear();
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '1d9fbd92-d3b6-4a4b-979c-e22fc6fbfb1c' DO NOT EDIT THIS LINE.
+public service ALU::disp~>result ( value : in real ) is
+begin
+  keypad::result( value );
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'ae420fc2-0f7f-46d0-9769-933d99fb5459' DO NOT EDIT THIS LINE.
+public service ALU::disp~>error ( message : in string ) is
+begin
+  keypad::error( message );
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

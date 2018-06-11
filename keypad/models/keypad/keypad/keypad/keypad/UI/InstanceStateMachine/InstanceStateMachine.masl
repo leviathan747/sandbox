@@ -1,0 +1,29 @@
+//! ACTIVITY BEGIN. 'b6c82e2d-821c-4d7f-ab6b-0054f1d65692' 'dd1f147f-293b-4e19-b17b-e70d089853f8' DO NOT EDIT THIS LINE.
+state keypad::UI.idle () is
+begin
+  // tick on an interval
+  schedule this.ticker generate UI.tick() to this delay this.ticklen;
+end state;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'b6c82e2d-821c-4d7f-ab6b-0054f1d65692' '6cc882ca-fe60-4f14-9182-e9cb839f6b00' DO NOT EDIT THIS LINE.
+state keypad::UI.polling () is
+evt : calcevent;
+begin
+  // empty the pending event queue
+  evt := getPendingEvent();
+  while ( NULLEVT /= evt.event_type ) loop
+    // send message
+    if ( KEYPRESS = evt.event_type ) then
+      keyIO~>key( evt.extra_data );
+    elsif ( CLEAR = evt.event_type ) then
+      keyIO~>clear();
+    end if;
+    // check for the next event
+    evt := getPendingEvent();
+  end loop;
+  // go back to idle
+  generate UI.done() to this;
+end state;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

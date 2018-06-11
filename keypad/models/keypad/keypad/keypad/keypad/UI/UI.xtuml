@@ -1,0 +1,130 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	'UI',
+	1,
+	'UI',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("d1f55cb9-1db6-4029-b04c-24a18919e67b",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_BATTR
+	VALUES ("d1f55cb9-1db6-4029-b04c-24a18919e67b",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_ATTR
+	VALUES ("d1f55cb9-1db6-4029-b04c-24a18919e67b",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	"00000000-0000-0000-0000-000000000000",
+	'ui_id',
+	'',
+	'',
+	'ui_id',
+	0,
+	"bb7bd159-c385-49f5-af67-ab8c3e44b630",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bb7bd159-c385-49f5-af67-ab8c3e44b630",
+	"00000000-0000-0000-0000-000000000000",
+	'MASLunique',
+	'',
+	'',
+	'../../../Shared/Shared.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("b1fde00f-6e39-4243-9589-0174bed56fc9",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_BATTR
+	VALUES ("b1fde00f-6e39-4243-9589-0174bed56fc9",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_ATTR
+	VALUES ("b1fde00f-6e39-4243-9589-0174bed56fc9",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	"d1f55cb9-1db6-4029-b04c-24a18919e67b",
+	'ticker',
+	'',
+	'',
+	'ticker',
+	0,
+	"2d081c3d-f44f-4e70-9b0f-7fe99c28bf3a",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("2d081c3d-f44f-4e70-9b0f-7fe99c28bf3a",
+	"00000000-0000-0000-0000-000000000000",
+	'timer',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("e0669327-cf8b-42ac-a3ec-f80588461ff8",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_BATTR
+	VALUES ("e0669327-cf8b-42ac-a3ec-f80588461ff8",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_ATTR
+	VALUES ("e0669327-cf8b-42ac-a3ec-f80588461ff8",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	"b1fde00f-6e39-4243-9589-0174bed56fc9",
+	'ticklen',
+	'',
+	'',
+	'ticklen',
+	0,
+	"8fb1492d-4bc8-4f5a-9763-6b851e700774",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("8fb1492d-4bc8-4f5a-9763-6b851e700774",
+	"00000000-0000-0000-0000-000000000000",
+	'duration',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("8c5ccbf8-ac0b-4264-acfb-ec2d1077acc1",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_BATTR
+	VALUES ("8c5ccbf8-ac0b-4264-acfb-ec2d1077acc1",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_ATTR
+	VALUES ("8c5ccbf8-ac0b-4264-acfb-ec2d1077acc1",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	"e0669327-cf8b-42ac-a3ec-f80588461ff8",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_OIDA
+	VALUES ("d1f55cb9-1db6-4029-b04c-24a18919e67b",
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	0,
+	'ui_id');
+INSERT INTO O_ID
+	VALUES (1,
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO O_ID
+	VALUES (2,
+	"38b1ac4a-42d1-4190-a7b9-c0769c9d05ec");
+INSERT INTO PE_PE
+	VALUES ("38b1ac4a-42d1-4190-a7b9-c0769c9d05ec",
+	1,
+	"ccabd0c4-cd4f-4383-a7c5-da950920b863",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("ccabd0c4-cd4f-4383-a7c5-da950920b863",
+	"00000000-0000-0000-0000-000000000000",
+	"bdf1ae1d-6981-44e0-a369-266a88242516",
+	'keypad',
+	'',
+	0,
+	'../keypad.xtuml');

@@ -1,0 +1,16 @@
+//! ACTIVITY BEGIN. '91d93e27-762b-4c02-bb90-b92b967f42cb' DO NOT EDIT THIS LINE.
+public instance service ALU::Memory.store ( value : in real ) is
+begin
+  // store the new value
+  this.value := value;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '791f9be2-5144-4d75-9d0d-1c61604c11c7' DO NOT EDIT THIS LINE.
+public instance service ALU::Memory.reset () is
+begin
+  // reset the memory to empty
+  this.value := 0;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

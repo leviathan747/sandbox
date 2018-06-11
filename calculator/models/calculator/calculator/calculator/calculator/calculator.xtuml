@@ -1,0 +1,57 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("aa6b467f-e58a-4f2b-8948-48ce8a411f45",
+	"00000000-0000-0000-0000-000000000000",
+	"e53d9501-5c4e-481f-a2f5-904085532440",
+	'calculator',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("af740b5f-371f-449f-a4d3-ad8545af69fb",
+	112,
+	"aa6b467f-e58a-4f2b-8948-48ce8a411f45",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'calculator::calculator::calculator::calculator');
+INSERT INTO DIM_DIA
+	VALUES ("af740b5f-371f-449f-a4d3-ad8545af69fb",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("aa6b467f-e58a-4f2b-8948-48ce8a411f45",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"17c0e654-66a9-402f-b17c-05b1a57148c6",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("17c0e654-66a9-402f-b17c-05b1a57148c6",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'calculator',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../calculator.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("e53d9501-5c4e-481f-a2f5-904085532440",
+	'calculator',
+	1,
+	'../../../calculator.xtuml');

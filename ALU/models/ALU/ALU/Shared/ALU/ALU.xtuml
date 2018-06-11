@@ -1,0 +1,72 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("80e35839-7704-4491-a8ec-c0b70e37847b",
+	"00000000-0000-0000-0000-000000000000",
+	'ALU',
+	'');
+INSERT INTO C_EP
+	VALUES ("b81e429c-d514-4c92-bd52-5fb3a147ec8e",
+	"80e35839-7704-4491-a8ec-c0b70e37847b",
+	0,
+	'key',
+	'');
+INSERT INTO C_IO
+	VALUES ("b81e429c-d514-4c92-bd52-5fb3a147ec8e",
+	"4a4426a3-7b05-4eb7-8e07-cee33078d0e3",
+	'key',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("4a4426a3-7b05-4eb7-8e07-cee33078d0e3",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_PP
+	VALUES ("eeb19e55-dc1e-48e3-b03d-d7bfe869cd3c",
+	"b81e429c-d514-4c92-bd52-5fb3a147ec8e",
+	"e64bd768-081e-4309-bff9-92f6312e11c2",
+	'code',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("e64bd768-081e-4309-bff9-92f6312e11c2",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../types/types.xtuml');
+INSERT INTO C_EP
+	VALUES ("f67fa0df-ff9f-4ce2-9c05-bf1c712636f9",
+	"80e35839-7704-4491-a8ec-c0b70e37847b",
+	0,
+	'clear',
+	'');
+INSERT INTO C_IO
+	VALUES ("f67fa0df-ff9f-4ce2-9c05-bf1c712636f9",
+	"4a4426a3-7b05-4eb7-8e07-cee33078d0e3",
+	'clear',
+	'',
+	0,
+	'',
+	"b81e429c-d514-4c92-bd52-5fb3a147ec8e");
+INSERT INTO PE_PE
+	VALUES ("80e35839-7704-4491-a8ec-c0b70e37847b",
+	1,
+	"d2305546-0d30-4ae0-a106-d77daaf651b9",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("d2305546-0d30-4ae0-a106-d77daaf651b9",
+	"00000000-0000-0000-0000-000000000000",
+	"81882a7b-c798-47fb-92d7-415c6438f9c1",
+	'Shared',
+	'',
+	0,
+	'../Shared.xtuml');

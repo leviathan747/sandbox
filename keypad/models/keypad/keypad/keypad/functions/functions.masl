@@ -1,0 +1,10 @@
+//! ACTIVITY BEGIN. '0319713f-99f8-47df-ba20-95e6645d1249' DO NOT EDIT THIS LINE.
+private service keypad::init () is
+ui : instance of UI;
+begin
+  ui := create unique UI( Current_State => idle, ticklen => @PT0.000001S@ );
+  connect();
+  schedule ui.ticker generate UI.tick() to ui delay ui.ticklen;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

@@ -1,0 +1,10 @@
+//! ACTIVITY BEGIN. 'e9c6a7c3-818a-4d4c-a799-c97c6415b3c9' DO NOT EDIT THIS LINE.
+public instance service ALU::Display.clearDisplay () is
+begin
+  this.value := 0;
+  this.whole_part := 0;
+  this.fractional_part := 0;
+  this.sign := 1;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
