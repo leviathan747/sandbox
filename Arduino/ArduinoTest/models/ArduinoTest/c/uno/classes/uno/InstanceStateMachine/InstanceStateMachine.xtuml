@@ -85,8 +85,8 @@ INSERT INTO SM_ACT
 	"106c3a0c-01d6-4669-b305-d4cfe0938e2f",
 	1,
 	'LED::on();
-P::delay( ms:50 );
-generate uno1:tick() to self;',
+create event instance e of uno1:tick() to self;
+timer = TIM::timer_start( event_inst:e, microseconds:50000 );',
 	'',
 	0);
 INSERT INTO SM_MOAH
@@ -101,8 +101,8 @@ INSERT INTO SM_ACT
 	"106c3a0c-01d6-4669-b305-d4cfe0938e2f",
 	1,
 	'LED::off();
-P::delay( ms:1000 );
-generate uno1:tick() to self;',
+create event instance e of uno1:tick() to self;
+timer = TIM::timer_start( event_inst:e, microseconds:1000000 );',
 	'',
 	0);
 INSERT INTO SM_TAH
