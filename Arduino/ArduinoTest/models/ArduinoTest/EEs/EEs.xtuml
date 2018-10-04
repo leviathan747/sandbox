@@ -8,54 +8,6 @@ INSERT INTO EP_PKG
 	'',
 	0);
 INSERT INTO S_EE
-	VALUES ("9bb82461-b759-42fb-8094-f4f60b04df9f",
-	'LED',
-	'',
-	'LED',
-	"00000000-0000-0000-0000-000000000000",
-	'',
-	'LED',
-	1);
-INSERT INTO S_BRG
-	VALUES ("c27c3568-38ce-492c-bbbe-61c2bc6807b4",
-	"9bb82461-b759-42fb-8094-f4f60b04df9f",
-	'on',
-	'',
-	0,
-	"ba5eda7a-def5-0000-0000-000000000000",
-	'',
-	1,
-	'',
-	0);
-INSERT INTO S_BRG
-	VALUES ("fec84751-d9fc-4821-8e5c-8668d7e95465",
-	"9bb82461-b759-42fb-8094-f4f60b04df9f",
-	'off',
-	'',
-	0,
-	"ba5eda7a-def5-0000-0000-000000000000",
-	'',
-	1,
-	'',
-	0);
-INSERT INTO S_BRG
-	VALUES ("e4142157-99dc-4456-bae0-eb5b9c76169f",
-	"9bb82461-b759-42fb-8094-f4f60b04df9f",
-	'init',
-	'',
-	0,
-	"ba5eda7a-def5-0000-0000-000000000000",
-	'',
-	1,
-	'',
-	0);
-INSERT INTO PE_PE
-	VALUES ("9bb82461-b759-42fb-8094-f4f60b04df9f",
-	1,
-	"6f109ed7-22e5-4b40-a063-a57f1a769728",
-	"00000000-0000-0000-0000-000000000000",
-	5);
-INSERT INTO S_EE
 	VALUES ("93221f41-bdc7-4dc1-8d76-141f83982653",
 	'Time',
 	'The Time external entity provides date, timestamp, and timer related operations.',

@@ -1,40 +1,41 @@
 /*----------------------------------------------------------------------------
  * Description:   Methods for bridging to an external entity.
  *
- * External Entity:  LED (LED)
+ * External Entity:  DigitalIO (DIO)
  * 
  * your copyright statement can go here (from te_copyright.body)
  *--------------------------------------------------------------------------*/
 
 #include "ArduinoTest_sys_types.h"
-#include "LED_bridge.h"
+#include "DIO_bridge.h"
 #include "Arduino.h"
 
 /*
- * Bridge:  on
+ * Bridge:  digitalRead
  */
-void
-LED_on()
+i_t
+DIO_digitalRead( const i_t p_pin )
 {
-  digitalWrite(LED_BUILTIN, HIGH);
+  return digitalRead(p_pin);
 }
 
 
 /*
- * Bridge:  off
+ * Bridge:  digitalWrite
  */
 void
-LED_off()
+DIO_digitalWrite( const i_t p_pin, const i_t p_value )
 {
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(p_pin, p_value);
 }
 
 
 /*
- * Bridge:  init
+ * Bridge:  pinMode
  */
 void
-LED_init()
+DIO_pinMode( const i_t p_mode, const i_t p_pin )
 {
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(p_pin, p_mode);
 }
+

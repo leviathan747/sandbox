@@ -38,7 +38,7 @@ INSERT INTO S_SYNC
 	"00000000-0000-0000-0000-000000000000",
 	'setup',
 	'',
-	'LED::init();
+	'DIO::pinMode( pin:LED_BUILTIN, mode:OUTPUT );
 create object instance uno of uno;
 generate uno1:tick() to uno;',
 	"ba5eda7a-def5-0000-0000-000000000000",
