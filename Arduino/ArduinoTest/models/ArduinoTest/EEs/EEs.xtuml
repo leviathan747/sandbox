@@ -1,0 +1,103 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("6f109ed7-22e5-4b40-a063-a57f1a769728",
+	"9d4a5b06-4ae4-4117-b6b9-36761a6da5d0",
+	"9d4a5b06-4ae4-4117-b6b9-36761a6da5d0",
+	'EEs',
+	'',
+	0);
+INSERT INTO S_EE
+	VALUES ("9bb82461-b759-42fb-8094-f4f60b04df9f",
+	'LED',
+	'',
+	'LED',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'LED',
+	1);
+INSERT INTO S_BRG
+	VALUES ("c27c3568-38ce-492c-bbbe-61c2bc6807b4",
+	"9bb82461-b759-42fb-8094-f4f60b04df9f",
+	'on',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BRG
+	VALUES ("fec84751-d9fc-4821-8e5c-8668d7e95465",
+	"9bb82461-b759-42fb-8094-f4f60b04df9f",
+	'off',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BRG
+	VALUES ("e4142157-99dc-4456-bae0-eb5b9c76169f",
+	"9bb82461-b759-42fb-8094-f4f60b04df9f",
+	'init',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("9bb82461-b759-42fb-8094-f4f60b04df9f",
+	1,
+	"6f109ed7-22e5-4b40-a063-a57f1a769728",
+	"00000000-0000-0000-0000-000000000000",
+	5);
+INSERT INTO S_EE
+	VALUES ("6118fb5e-da9e-4e99-a79f-f18c2e6c2d23",
+	'Platform',
+	'',
+	'P',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'Platform',
+	1);
+INSERT INTO S_BRG
+	VALUES ("5ac5b296-13ed-49ec-bb27-b754871a302d",
+	"6118fb5e-da9e-4e99-a79f-f18c2e6c2d23",
+	'delay',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BPARM
+	VALUES ("87ceb116-07cb-4d18-a42e-f06fcf70f22c",
+	"5ac5b296-13ed-49ec-bb27-b754871a302d",
+	'ms',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO PE_PE
+	VALUES ("6118fb5e-da9e-4e99-a79f-f18c2e6c2d23",
+	1,
+	"6f109ed7-22e5-4b40-a063-a57f1a769728",
+	"00000000-0000-0000-0000-000000000000",
+	5);
+INSERT INTO PE_PE
+	VALUES ("6f109ed7-22e5-4b40-a063-a57f1a769728",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("9d4a5b06-4ae4-4117-b6b9-36761a6da5d0",
+	'ArduinoTest',
+	1,
+	'../ArduinoTest.xtuml');

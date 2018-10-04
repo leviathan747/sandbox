@@ -1,0 +1,75 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("ffa68abf-ad75-481b-88a7-a384203ccd4e",
+	"00000000-0000-0000-0000-000000000000",
+	"9d4a5b06-4ae4-4117-b6b9-36761a6da5d0",
+	'f',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("ee291958-209c-40b4-b98b-581c90bf1c2a",
+	112,
+	"ffa68abf-ad75-481b-88a7-a384203ccd4e",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'ArduinoTest::c::uno::f');
+INSERT INTO DIM_DIA
+	VALUES ("ee291958-209c-40b4-b98b-581c90bf1c2a",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("28206a5a-8299-4de0-9199-898067a39397",
+	"00000000-0000-0000-0000-000000000000",
+	'setup',
+	'',
+	'LED::init();
+create object instance uno of uno;
+generate uno1:tick() to uno;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("28206a5a-8299-4de0-9199-898067a39397",
+	1,
+	"ffa68abf-ad75-481b-88a7-a384203ccd4e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("ffa68abf-ad75-481b-88a7-a384203ccd4e",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"d47a76b9-a391-471d-bbc2-094c1b902f6e",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("d47a76b9-a391-471d-bbc2-094c1b902f6e",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'uno',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../uno.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("9d4a5b06-4ae4-4117-b6b9-36761a6da5d0",
+	'ArduinoTest',
+	1,
+	'../../../ArduinoTest.xtuml');
