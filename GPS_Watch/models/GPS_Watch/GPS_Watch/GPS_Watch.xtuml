@@ -1,0 +1,170 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("8a27dd1c-c46c-47fa-9e35-1dcc788e6ac6",
+	"77f3f4fc-aaad-43f6-9e7b-da4dc679b688",
+	"77f3f4fc-aaad-43f6-9e7b-da4dc679b688",
+	'GPS_Watch',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("55fa09a0-94e5-449c-a6fa-82eeb717fa1a",
+	112,
+	"8a27dd1c-c46c-47fa-9e35-1dcc788e6ac6",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'GPS_Watch::GPS_Watch');
+INSERT INTO GD_GE
+	VALUES ("88a50e1e-58a0-40ce-8280-43d96e9b2558",
+	"55fa09a0-94e5-449c-a6fa-82eeb717fa1a",
+	"6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	209,
+	0,
+	'GPS_Watch::GPS_Watch::GPS_Watch');
+INSERT INTO GD_SHP
+	VALUES ("88a50e1e-58a0-40ce-8280-43d96e9b2558");
+INSERT INTO GD_NCS
+	VALUES ("88a50e1e-58a0-40ce-8280-43d96e9b2558");
+INSERT INTO DIM_ND
+	VALUES (253.000000,
+	145.000000,
+	"88a50e1e-58a0-40ce-8280-43d96e9b2558");
+INSERT INTO DIM_GE
+	VALUES (4104.000000,
+	3096.000000,
+	"88a50e1e-58a0-40ce-8280-43d96e9b2558",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("88a50e1e-58a0-40ce-8280-43d96e9b2558",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("55fa09a0-94e5-449c-a6fa-82eeb717fa1a",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PR_PROC
+	VALUES ("6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	'GPS_Watch',
+	'');
+INSERT INTO PR_TERM
+	VALUES ("89ddc7d2-df14-420f-a966-7e0d32d0c2a7",
+	"6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	'',
+	'Tracking',
+	'HR');
+INSERT INTO PR_TSVC
+	VALUES ("0502976a-3726-4fdd-9bab-1593b97fec08",
+	"89ddc7d2-df14-420f-a966-7e0d32d0c2a7",
+	'registerListener',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("d619a341-306d-40c6-9597-f0558c3ffd2b",
+	"89ddc7d2-df14-420f-a966-7e0d32d0c2a7",
+	'unregisterListener',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TERM
+	VALUES ("2323aead-dd30-477f-8a99-6bf2eba6343d",
+	"6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	'',
+	'Tracking',
+	'LOC');
+INSERT INTO PR_TSVC
+	VALUES ("eb574adf-3bb6-49bd-a811-6c64d11aff7b",
+	"2323aead-dd30-477f-8a99-6bf2eba6343d",
+	'getDistance',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("b8e45824-08d1-419c-ad45-565883d9c2d5",
+	"2323aead-dd30-477f-8a99-6bf2eba6343d",
+	'getLocation',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("b1e38c61-bb06-4d5c-ac42-4fe14cd06da8",
+	"2323aead-dd30-477f-8a99-6bf2eba6343d",
+	'registerListener',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("1ef19a20-80c2-4f97-a0e7-4a217c10c996",
+	"2323aead-dd30-477f-8a99-6bf2eba6343d",
+	'unregisterListener',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TERM
+	VALUES ("5ed47a4a-ee88-40b6-a04f-3bdc41bd1219",
+	"6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	'',
+	'Tracking',
+	'UI');
+INSERT INTO PR_TSVC
+	VALUES ("fad2d513-339e-4c66-b585-70ffacda3bec",
+	"5ed47a4a-ee88-40b6-a04f-3bdc41bd1219",
+	'setData',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("3a5ac046-071c-429e-85ef-fe6442a7c3c7",
+	"5ed47a4a-ee88-40b6-a04f-3bdc41bd1219",
+	'setIndicator',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PR_TSVC
+	VALUES ("1799c5f9-afd7-4bdb-8f54-0bc4bc81eaa0",
+	"5ed47a4a-ee88-40b6-a04f-3bdc41bd1219",
+	'setTime',
+	'',
+	'',
+	3,
+	1);
+INSERT INTO PE_PE
+	VALUES ("6bfcb5c3-b711-4324-9205-2004dbcf38bf",
+	1,
+	"8a27dd1c-c46c-47fa-9e35-1dcc788e6ac6",
+	"00000000-0000-0000-0000-000000000000",
+	25);
+INSERT INTO PE_PE
+	VALUES ("8a27dd1c-c46c-47fa-9e35-1dcc788e6ac6",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("77f3f4fc-aaad-43f6-9e7b-da4dc679b688",
+	'GPS_Watch',
+	1,
+	'../GPS_Watch.xtuml');
