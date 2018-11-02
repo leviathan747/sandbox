@@ -1,0 +1,102 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("25e3053d-68ed-4d95-b845-d0cc3347ca06",
+	"00000000-0000-0000-0000-000000000000",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'Shared',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("2b99c868-ea81-4d75-a14a-1a54c31045c7",
+	112,
+	"25e3053d-68ed-4d95-b845-d0cc3347ca06",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'',
+	'test1::Relationships::Shared');
+INSERT INTO GD_GE
+	VALUES ("5fcced7f-8b9f-4d23-9fcd-8c0370380d48",
+	"2b99c868-ea81-4d75-a14a-1a54c31045c7",
+	"60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	51,
+	0,
+	'test1::Relationships::Shared::Colour');
+INSERT INTO GD_SHP
+	VALUES ("5fcced7f-8b9f-4d23-9fcd-8c0370380d48");
+INSERT INTO GD_NCS
+	VALUES ("5fcced7f-8b9f-4d23-9fcd-8c0370380d48");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"5fcced7f-8b9f-4d23-9fcd-8c0370380d48");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"5fcced7f-8b9f-4d23-9fcd-8c0370380d48",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("5fcced7f-8b9f-4d23-9fcd-8c0370380d48",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("2b99c868-ea81-4d75-a14a-1a54c31045c7",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT
+	VALUES ("60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	"00000000-0000-0000-0000-000000000000",
+	'Colour',
+	'',
+	'');
+INSERT INTO S_UDT
+	VALUES ("60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	"49345ba0-92e9-483d-aa87-2b53e1eaf4b1",
+	0,
+	'Red,Green,Black');
+INSERT INTO S_DT_PROXY
+	VALUES ("49345ba0-92e9-483d-aa87-2b53e1eaf4b1",
+	"00000000-0000-0000-0000-000000000000",
+	'MASLtype',
+	'',
+	'',
+	'../../types/types.xtuml');
+INSERT INTO PE_PE
+	VALUES ("60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	1,
+	"25e3053d-68ed-4d95-b845-d0cc3347ca06",
+	"00000000-0000-0000-0000-000000000000",
+	3);
+INSERT INTO PE_PE
+	VALUES ("25e3053d-68ed-4d95-b845-d0cc3347ca06",
+	1,
+	"8dc0e50c-9c22-4f73-b602-d1c6ce528360",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("8dc0e50c-9c22-4f73-b602-d1c6ce528360",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'Relationships',
+	'masl_domain',
+	0,
+	'../Relationships.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'test1',
+	1,
+	'../../test1.xtuml');

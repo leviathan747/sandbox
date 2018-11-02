@@ -1,0 +1,80 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("b1912e1e-10cb-4049-8e0a-1597da3baae7",
+	'Middle',
+	8,
+	'M',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("e4af0bbe-f38b-441b-b681-ff4c17ea01a8",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_BATTR
+	VALUES ("e4af0bbe-f38b-441b-b681-ff4c17ea01a8",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_ATTR
+	VALUES ("e4af0bbe-f38b-441b-b681-ff4c17ea01a8",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7",
+	"00000000-0000-0000-0000-000000000000",
+	'Middle_Identifier',
+	'',
+	'',
+	'Middle_Identifier',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("5847bfd2-606b-4927-81b6-dd4012ca392e",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("b5543d23-9d37-4bc3-b336-b7d5e09a94a3",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_BATTR
+	VALUES ("b5543d23-9d37-4bc3-b336-b7d5e09a94a3",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_ATTR
+	VALUES ("b5543d23-9d37-4bc3-b336-b7d5e09a94a3",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7",
+	"e4af0bbe-f38b-441b-b681-ff4c17ea01a8",
+	'Middle_Data',
+	'',
+	'',
+	'Middle_Data',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_OIDA
+	VALUES ("e4af0bbe-f38b-441b-b681-ff4c17ea01a8",
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7",
+	0,
+	'Middle_Identifier');
+INSERT INTO O_ID
+	VALUES (1,
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO O_ID
+	VALUES (2,
+	"b1912e1e-10cb-4049-8e0a-1597da3baae7");
+INSERT INTO PE_PE
+	VALUES ("b1912e1e-10cb-4049-8e0a-1597da3baae7",
+	1,
+	"7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'Relationships',
+	'',
+	0,
+	'../Relationships.xtuml');

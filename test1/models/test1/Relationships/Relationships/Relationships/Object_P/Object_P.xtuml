@@ -1,0 +1,80 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("60706cc0-b7ce-47a7-ba44-af74cf5168b5",
+	'Object_P',
+	17,
+	'objP',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("00b20618-4100-4f1f-af47-e4445883e9f9",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_BATTR
+	VALUES ("00b20618-4100-4f1f-af47-e4445883e9f9",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_ATTR
+	VALUES ("00b20618-4100-4f1f-af47-e4445883e9f9",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5",
+	"00000000-0000-0000-0000-000000000000",
+	'idP',
+	'Preferred identifier.',
+	'',
+	'idP',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("5847bfd2-606b-4927-81b6-dd4012ca392e",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("b2f9431d-ace2-468e-9f02-8dcb86901861",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_BATTR
+	VALUES ("b2f9431d-ace2-468e-9f02-8dcb86901861",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_ATTR
+	VALUES ("b2f9431d-ace2-468e-9f02-8dcb86901861",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5",
+	"00b20618-4100-4f1f-af47-e4445883e9f9",
+	'ResultA',
+	'This attribute is manipulted to indicate that the required operation was successful.',
+	'',
+	'ResultA',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_OIDA
+	VALUES ("00b20618-4100-4f1f-af47-e4445883e9f9",
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5",
+	0,
+	'idP');
+INSERT INTO O_ID
+	VALUES (1,
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO O_ID
+	VALUES (2,
+	"60706cc0-b7ce-47a7-ba44-af74cf5168b5");
+INSERT INTO PE_PE
+	VALUES ("60706cc0-b7ce-47a7-ba44-af74cf5168b5",
+	1,
+	"7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'Relationships',
+	'',
+	0,
+	'../Relationships.xtuml');

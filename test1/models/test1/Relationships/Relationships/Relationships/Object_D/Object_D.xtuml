@@ -1,0 +1,105 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	'Object_D',
+	2,
+	'objD',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("683da538-69b8-4689-a798-6d9ef9e56005",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_BATTR
+	VALUES ("683da538-69b8-4689-a798-6d9ef9e56005",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_ATTR
+	VALUES ("683da538-69b8-4689-a798-6d9ef9e56005",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	"00000000-0000-0000-0000-000000000000",
+	'idD',
+	'Preferred identifier.',
+	'',
+	'idD',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("5847bfd2-606b-4927-81b6-dd4012ca392e",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../types/types.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("e33b7dbb-7022-47fd-8fa8-125522a81f80",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_BATTR
+	VALUES ("e33b7dbb-7022-47fd-8fa8-125522a81f80",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_ATTR
+	VALUES ("e33b7dbb-7022-47fd-8fa8-125522a81f80",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	"683da538-69b8-4689-a798-6d9ef9e56005",
+	'ResultA',
+	'This attribute is manipulated to indicate that the required operation was successful.',
+	'',
+	'ResultA',
+	0,
+	"5847bfd2-606b-4927-81b6-dd4012ca392e",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("47eeefa8-e22b-46b2-b7aa-2b35b755b27d",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_BATTR
+	VALUES ("47eeefa8-e22b-46b2-b7aa-2b35b755b27d",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_ATTR
+	VALUES ("47eeefa8-e22b-46b2-b7aa-2b35b755b27d",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	"e33b7dbb-7022-47fd-8fa8-125522a81f80",
+	'Colour_Of_D',
+	'Colour enumeration',
+	'',
+	'Colour_Of_D',
+	0,
+	"60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("60a33f9b-0809-4d9f-a10e-fde1fc31cf91",
+	"00000000-0000-0000-0000-000000000000",
+	'Colour',
+	'',
+	'',
+	'../../../Shared/Shared.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_OIDA
+	VALUES ("683da538-69b8-4689-a798-6d9ef9e56005",
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	0,
+	'idD');
+INSERT INTO O_ID
+	VALUES (1,
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO O_ID
+	VALUES (2,
+	"e3c62a1f-c9d2-402a-a81b-4082e3e14389");
+INSERT INTO PE_PE
+	VALUES ("e3c62a1f-c9d2-402a-a81b-4082e3e14389",
+	1,
+	"7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("7fa0dada-dbf9-4b73-9ca8-8ca7098ce8bd",
+	"00000000-0000-0000-0000-000000000000",
+	"9da6fb51-228e-4e0c-b646-4b54f5af7762",
+	'Relationships',
+	'',
+	0,
+	'../Relationships.xtuml');
